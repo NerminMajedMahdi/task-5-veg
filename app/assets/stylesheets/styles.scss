@@ -1,0 +1,42 @@
+body {
+  background-image: url(image_path("background.jpg"));
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  margin-top: 70px;
+  color:whitesmoke;
+}
+
+/* footer starts here*/
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+
+a{color:white;}
+
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -110px;
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+.site-footer, .page-wrap:after {
+  height: 110px;
+}
+.site-footer {
+  background: rgba (220, 160, 140, 0.5);
+  color: white;
+  border-top-color: white;
+}
+.field_input {
+  color: black;
+}
+.field_header {
+  color: white;
+}
