@@ -49,6 +49,7 @@
                     <%= f.submit "Submit" %>
                   </p>
               <% end %>
+  <%= render 'comments' %>
           <% end %>
 
         
@@ -60,7 +61,7 @@
   </div>
 
 
-  <%= render 'comments' %>
+
 <%= will_paginate @comments %>
 
 
