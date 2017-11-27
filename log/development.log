@@ -4735,3 +4735,16 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 63ms (Views: 45.7ms | ActiveRecord: 0.9ms)
 
 
+Started GET "/users" for 127.0.0.1 at 2017-11-27 14:32:22 +0200
+Processing by UsersController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-11-27 14:32:22 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 43ms (Views: 41.3ms | ActiveRecord: 0.0ms)
+
+
