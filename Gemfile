@@ -37,10 +37,10 @@ gem 'stripe'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
+ gem 'byebug', platform: :mri
  gem 'rspec-rails'
-gem "factory_bot_rails", "~> 4.0"
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platform: :mri
+ gem "factory_bot_rails", "~> 4.0"
+
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
 end
