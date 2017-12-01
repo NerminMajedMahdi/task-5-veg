@@ -10,3 +10,12 @@ $(document).on('turbolinks:load', function(){
         }
     });
 });
+
+$(document).on('turbolinks:load', function(){
+  refreshRating();
+  $(".img-zoom").elevateZoom({
+    zoomType: "lens",
+    lensShape: "round",
+    lensSize: 200,
+  });
+});

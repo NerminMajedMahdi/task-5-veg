@@ -23,6 +23,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
+gem 'jquery-zoom-rails', '~> 0.0.3'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
@@ -70,3 +71,6 @@ gem 'cancancan', '~> 1.10'
 
 # 5.9 for pagination
 gem 'will_paginate', '~> 3.1.0'
+
+
+

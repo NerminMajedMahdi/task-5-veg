@@ -6892,3 +6892,617 @@ puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
   Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
   Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
   Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (56.1ms)
+Started GET "/products" for 127.0.0.1 at 2017-12-01 19:12:03 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [1 times] (10.9ms)
+  Rendered products/index.html.erb within layouts/application (50.1ms)
+Completed 200 OK in 2269ms (Views: 2199.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/static_pages/index" for 127.0.0.1 at 2017-12-01 19:12:09 +0200
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 48ms (Views: 39.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-01 19:12:10 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [1 times] (3.8ms)
+  Rendered products/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 50ms (Views: 47.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/static_pages/about" for 127.0.0.1 at 2017-12-01 19:12:12 +0200
+Processing by StaticPagesController#about as HTML
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 45ms (Views: 42.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/contact" for 127.0.0.1 at 2017-12-01 19:12:13 +0200
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 43ms (Views: 40.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/landing_page" for 127.0.0.1 at 2017-12-01 19:12:14 +0200
+Processing by StaticPagesController#landing_page as HTML
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered static_pages/landing_page.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 88ms (Views: 39.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-12-01 19:12:15 +0200
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:UsersController> at /home/nm/trails1-product-reviews/app/controllers/users_controller.rb:3)
+Processing by UsersController#index as HTML
+Completed 401 Unauthorized in 18ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-12-01 19:12:16 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (49.9ms)
+Completed 200 OK in 141ms (Views: 119.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/static_pages/landing_page" for 127.0.0.1 at 2017-12-01 19:12:16 +0200
+Processing by StaticPagesController#landing_page as HTML
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered static_pages/landing_page.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 72ms (Views: 69.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-01 19:12:28 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [1 times] (2.6ms)
+  Rendered products/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 61ms (Views: 58.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-01 19:12:40 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [1 times] (2.0ms)
+  Rendered products/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 56ms (Views: 54.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-01 19:12:43 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [1 times] (1.4ms)
+  Rendered products/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 50ms (Views: 47.1ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/products/1" for 127.0.0.1 at 2017-12-01 19:12:49 +0200
+Processing by ProductsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"csXn/pOdq+g/JEM4mMufPhd4kkcl4IiLmjyOB3EcKawXjyymkoSloSQrKOQ4+StmX7P5eZcZ1ytqfKC+7zY5Bg==", "id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 1]]
+  [1m[35m (65.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/products
+Completed 302 Found in 98ms (ActiveRecord: 66.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-01 19:12:49 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered products/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 40ms (Views: 38.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-01 19:12:56 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered products/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 48ms (Views: 45.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2017-12-01 19:13:05 +0200
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (20.1ms)
+  Rendered products/new.html.erb within layouts/application (28.5ms)
+Completed 200 OK in 138ms (Views: 67.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2017-12-01 19:13:11 +0200
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (5.6ms)
+  Rendered products/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 57ms (Views: 55.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2017-12-01 19:13:21 +0200
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (7.7ms)
+  Rendered products/new.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 48ms (Views: 46.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2017-12-01 19:13:37 +0200
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rqhpj/bzJl7HKR6IER+9ncqpBjUNCTgGC5oBL8+KT67L4qLX9+ooF9wmdVSxLQnFgmJtC7/wZ6b72i+WUaBfBA==", "product"=>{"name"=>"mixed-veg", "description"=>"dgfdsf", "image_url"=>"https://static.pexels.com/photos/36764/marguerite-daisy-beautiful-beauty.jpg", "colour"=>"mdesad", "price"=>"10"}, "commit"=>"Create Product"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "image_url", "created_at", "updated_at", "colour", "price") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "mixed-veg"], ["description", "dgfdsf"], ["image_url", "https://static.pexels.com/photos/36764/marguerite-daisy-beautiful-beauty.jpg"], ["created_at", "2017-12-01 17:13:37.673995"], ["updated_at", "2017-12-01 17:13:37.673995"], ["colour", "mdesad"], ["price", 10]]
+  [1m[35m (227.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/products/2
+Completed 302 Found in 234ms (ActiveRecord: 228.0ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2017-12-01 19:13:37 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered shared/_stripe_checkout_button.html.erb (0.6ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 2]]
+  Rendered products/show.html.erb within layouts/application (64.4ms)
+Completed 200 OK in 166ms (Views: 100.4ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2017-12-01 19:13:57 +0200
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"weI1JqwfHmghF+criyQzdnXYj3n09xVqR5fr237wHb2kqP5+rQYQIToYjPcrFocuPRPkR0YOSsq318Vi4NoNFw==", "product"=>{"name"=>"mixed-veg", "description"=>"xcvxcvxc", "image_url"=>"https://static.pexels.com/photos/69465/tulips-garden-flowers-color-69465.jpeg", "colour"=>"yallow", "price"=>"19"}, "commit"=>"Create Product"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "image_url", "created_at", "updated_at", "colour", "price") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "mixed-veg"], ["description", "xcvxcvxc"], ["image_url", "https://static.pexels.com/photos/69465/tulips-garden-flowers-color-69465.jpeg"], ["created_at", "2017-12-01 17:13:57.009149"], ["updated_at", "2017-12-01 17:13:57.009149"], ["colour", "yallow"], ["price", 19]]
+  [1m[35m (194.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/products/3
+Completed 302 Found in 201ms (ActiveRecord: 194.4ms)
+
+
+Started GET "/products/3" for 127.0.0.1 at 2017-12-01 19:13:57 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered shared/_stripe_checkout_button.html.erb (0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 3]]
+  Rendered products/show.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 46ms (Views: 42.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2017-12-01 19:14:22 +0200
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FkVnrDcbdy4WLJO2f0zM2foZ8szLKnlFuRhAz7exhshzD6z0NgJ5Zw0j+GrffniBstKZ8nnTJuVJWG52KZuWYg==", "product"=>{"name"=>"flower2", "description"=>"cvbxvbxvz", "image_url"=>"https://static.pexels.com/photos/69465/tulips-garden-flowers-color-69465.jpeg", "colour"=>"Orange", "price"=>"20"}, "commit"=>"Create Product"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "image_url", "created_at", "updated_at", "colour", "price") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "flower2"], ["description", "cvbxvbxvz"], ["image_url", "https://static.pexels.com/photos/69465/tulips-garden-flowers-color-69465.jpeg"], ["created_at", "2017-12-01 17:14:22.890308"], ["updated_at", "2017-12-01 17:14:22.890308"], ["colour", "Orange"], ["price", 20]]
+  [1m[35m (172.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/products/4
+Completed 302 Found in 178ms (ActiveRecord: 173.3ms)
+
+
+Started GET "/products/4" for 127.0.0.1 at 2017-12-01 19:14:23 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered shared/_stripe_checkout_button.html.erb (0.8ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 4]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 4]]
+  Rendered products/show.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 57ms (Views: 53.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/static_pages/about" for 127.0.0.1 at 2017-12-01 19:14:52 +0200
+Processing by StaticPagesController#about as HTML
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 42ms (Views: 40.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/contact" for 127.0.0.1 at 2017-12-01 19:14:53 +0200
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 41ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/landing_page" for 127.0.0.1 at 2017-12-01 19:14:55 +0200
+Processing by StaticPagesController#landing_page as HTML
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered static_pages/landing_page.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 44ms (Views: 41.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/static_pages/contact" for 127.0.0.1 at 2017-12-01 19:15:06 +0200
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 54ms (Views: 52.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/landing_page" for 127.0.0.1 at 2017-12-01 19:15:07 +0200
+Processing by StaticPagesController#landing_page as HTML
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered static_pages/landing_page.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 53ms (Views: 50.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-12-01 19:15:08 +0200
+Processing by UsersController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-12-01 19:15:08 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 44ms (Views: 42.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-01 19:15:10 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [3 times] (3.5ms)
+  Rendered products/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 53ms (Views: 50.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/3" for 127.0.0.1 at 2017-12-01 19:15:16 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered shared/_stripe_checkout_button.html.erb (1.1ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 3]]
+  Rendered products/show.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 52ms (Views: 47.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/products/3/edit" for 127.0.0.1 at 2017-12-01 19:15:25 +0200
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (6.7ms)
+  Rendered products/edit.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 121ms (Views: 47.7ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/products/3" for 127.0.0.1 at 2017-12-01 19:32:16 +0200
+Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/iNSYY7RUm0AN+YNS/dzo5LbEg171m3L/9q4qx+RIa6baZk5j8hcJBs4jdHrxcf72hB5M8kvMmsPmpYSgbsxBA==", "product"=>{"name"=>"mixed-veg", "description"=>"xcvxcvxc", "image_url"=>"", "colour"=>"yallow", "price"=>"19"}, "commit"=>"Update Product", "id"=>"3"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (6.2ms)
+  Rendered products/edit.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 279ms (Views: 274.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-01 19:32:19 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [3 times] (2.8ms)
+  Rendered products/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 50ms (Views: 48.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/static_pages/landing_page" for 127.0.0.1 at 2017-12-01 19:32:24 +0200
+Processing by StaticPagesController#landing_page as HTML
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered static_pages/landing_page.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 62ms (Views: 59.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/static_pages/index" for 127.0.0.1 at 2017-12-01 19:32:30 +0200
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 45ms (Views: 43.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-01 19:32:32 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [3 times] (5.1ms)
+  Rendered products/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 61ms (Views: 59.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/static_pages/about" for 127.0.0.1 at 2017-12-01 19:32:32 +0200
+Processing by StaticPagesController#about as HTML
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 46ms (Views: 43.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/contact" for 127.0.0.1 at 2017-12-01 19:32:33 +0200
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 70ms (Views: 68.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/landing_page" for 127.0.0.1 at 2017-12-01 19:32:33 +0200
+Processing by StaticPagesController#landing_page as HTML
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered static_pages/landing_page.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 48ms (Views: 46.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-12-01 19:32:34 +0200
+Processing by UsersController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-12-01 19:32:34 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 47ms (Views: 45.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/contact" for 127.0.0.1 at 2017-12-01 19:40:30 +0200
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 84ms (Views: 81.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/about" for 127.0.0.1 at 2017-12-01 19:40:31 +0200
+Processing by StaticPagesController#about as HTML
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 61ms (Views: 59.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/landing_page" for 127.0.0.1 at 2017-12-01 19:40:32 +0200
+Processing by StaticPagesController#landing_page as HTML
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered static_pages/landing_page.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 51ms (Views: 49.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/static_pages/contact" for 127.0.0.1 at 2017-12-01 19:40:33 +0200
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 53ms (Views: 50.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/about" for 127.0.0.1 at 2017-12-01 19:40:34 +0200
+Processing by StaticPagesController#about as HTML
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 53ms (Views: 51.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/about" for 127.0.0.1 at 2017-12-01 19:41:28 +0200
+Processing by StaticPagesController#about as HTML
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/nm/trails1-product-reviews/app/views/static_pages/about.html.erb:6: syntax error, unexpected tINTEGER, expecting ')'
+photo-257816.jpeg, width: "350", class: "img-zoom") );@outpu
+                              ^
+/home/nm/trails1-product-reviews/app/views/static_pages/about.html.erb:6: syntax error, unexpected tIDENTIFIER, expecting ')'
+peg, width: "350", class: "img-zoom") );@output_buffer.safe_
+                              ^
+/home/nm/trails1-product-reviews/app/views/static_pages/about.html.erb:6: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+idth: "350", class: "img-zoom") );@output_buffer.safe_append
+                              ^
+/home/nm/trails1-product-reviews/app/views/static_pages/about.html.erb:6: unterminated string meets end of file):
+  
+app/views/static_pages/about.html.erb:6: syntax error, unexpected tINTEGER, expecting ')'
+app/views/static_pages/about.html.erb:6: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/static_pages/about.html.erb:6: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+app/views/static_pages/about.html.erb:6: unterminated string meets end of file
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.3ms)
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (42.8ms)
+Started GET "/static_pages/about" for 127.0.0.1 at 2017-12-01 19:41:30 +0200
+Processing by StaticPagesController#about as HTML
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/nm/trails1-product-reviews/app/views/static_pages/about.html.erb:6: syntax error, unexpected tINTEGER, expecting ')'
+photo-257816.jpeg, width: "350", class: "img-zoom") );@outpu
+                              ^
+/home/nm/trails1-product-reviews/app/views/static_pages/about.html.erb:6: syntax error, unexpected tIDENTIFIER, expecting ')'
+peg, width: "350", class: "img-zoom") );@output_buffer.safe_
+                              ^
+/home/nm/trails1-product-reviews/app/views/static_pages/about.html.erb:6: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+idth: "350", class: "img-zoom") );@output_buffer.safe_append
+                              ^
+/home/nm/trails1-product-reviews/app/views/static_pages/about.html.erb:6: unterminated string meets end of file):
+  
+app/views/static_pages/about.html.erb:6: syntax error, unexpected tINTEGER, expecting ')'
+app/views/static_pages/about.html.erb:6: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/static_pages/about.html.erb:6: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+app/views/static_pages/about.html.erb:6: unterminated string meets end of file
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (13.4ms)
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (40.7ms)
+Started GET "/static_pages/about" for 127.0.0.1 at 2017-12-01 19:41:49 +0200
+Processing by StaticPagesController#about as HTML
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/nm/trails1-product-reviews/app/views/static_pages/about.html.erb:6: syntax error, unexpected tINTEGER, expecting ')'
+photo-257816.jpeg, width: "350", class: "img-zoom") );@outpu
+                              ^
+/home/nm/trails1-product-reviews/app/views/static_pages/about.html.erb:6: syntax error, unexpected tIDENTIFIER, expecting ')'
+peg, width: "350", class: "img-zoom") );@output_buffer.safe_
+                              ^
+/home/nm/trails1-product-reviews/app/views/static_pages/about.html.erb:6: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+idth: "350", class: "img-zoom") );@output_buffer.safe_append
+                              ^
+/home/nm/trails1-product-reviews/app/views/static_pages/about.html.erb:6: unterminated string meets end of file):
+  
+app/views/static_pages/about.html.erb:6: syntax error, unexpected tINTEGER, expecting ')'
+app/views/static_pages/about.html.erb:6: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/static_pages/about.html.erb:6: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+app/views/static_pages/about.html.erb:6: unterminated string meets end of file
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.8ms)
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (34.2ms)
+Started GET "/static_pages/about" for 127.0.0.1 at 2017-12-01 19:41:50 +0200
+Processing by StaticPagesController#about as HTML
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/nm/trails1-product-reviews/app/views/static_pages/about.html.erb:6: syntax error, unexpected tINTEGER, expecting ')'
+photo-257816.jpeg, width: "350", class: "img-zoom") );@outpu
+                              ^
+/home/nm/trails1-product-reviews/app/views/static_pages/about.html.erb:6: syntax error, unexpected tIDENTIFIER, expecting ')'
+peg, width: "350", class: "img-zoom") );@output_buffer.safe_
+                              ^
+/home/nm/trails1-product-reviews/app/views/static_pages/about.html.erb:6: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+idth: "350", class: "img-zoom") );@output_buffer.safe_append
+                              ^
+/home/nm/trails1-product-reviews/app/views/static_pages/about.html.erb:6: unterminated string meets end of file):
+  
+app/views/static_pages/about.html.erb:6: syntax error, unexpected tINTEGER, expecting ')'
+app/views/static_pages/about.html.erb:6: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/static_pages/about.html.erb:6: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+app/views/static_pages/about.html.erb:6: unterminated string meets end of file
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.4ms)
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (34.5ms)
+Started GET "/static_pages/about" for 127.0.0.1 at 2017-12-01 19:42:11 +0200
+Processing by StaticPagesController#about as HTML
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 39ms (Views: 37.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/about" for 127.0.0.1 at 2017-12-01 19:46:03 +0200
+Processing by StaticPagesController#about as HTML
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 45ms (Views: 43.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/about" for 127.0.0.1 at 2017-12-01 19:46:07 +0200
+Processing by StaticPagesController#about as HTML
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 39ms (Views: 37.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/contact" for 127.0.0.1 at 2017-12-01 19:46:08 +0200
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 43ms (Views: 41.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/landing_page" for 127.0.0.1 at 2017-12-01 19:46:09 +0200
+Processing by StaticPagesController#landing_page as HTML
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered static_pages/landing_page.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 46ms (Views: 43.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-12-01 19:46:10 +0200
+Processing by UsersController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-12-01 19:46:10 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 47ms (Views: 45.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/about" for 127.0.0.1 at 2017-12-01 19:46:11 +0200
+Processing by StaticPagesController#about as HTML
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 67ms (Views: 65.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-01 19:46:12 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [3 times] (3.9ms)
+  Rendered products/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 47ms (Views: 44.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2017-12-01 19:46:16 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered shared/_stripe_checkout_button.html.erb (0.9ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 2]]
+  Rendered products/show.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 52ms (Views: 47.4ms | ActiveRecord: 0.8ms)
+
+

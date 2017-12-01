@@ -1,7 +1,7 @@
 <%# @products.each do |product| %>
   <div class="col-sm-2 col-md-4">
     <%= link_to(product) do %>
-      <%= image_tag(product.image_url, class: "img-responsive thumbnail") %>
+    <%= image_tag( product.image_url, class:"img-responsive img-zoom1", data_zoom_image: product.image_url, style:'height: 100%; width: 100%; object-fit: contain' ) %>
     <% end %>
     <h2><%= product.name %></h2>
     <p><%= product.description %></p>
