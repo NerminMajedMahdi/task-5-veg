@@ -3,6 +3,7 @@
     <%= link_to(product) do %>
     <%= image_tag( product.image_url, class:"img-responsive img-zoom1", data_zoom_image: product.image_url, style:'height: 100%; width: 100%; object-fit: contain' ) %>
     <% end %>
+<% cache product do %>
     <h2><%= product.name %></h2>
     <p><%= product.description %></p>
     <p><%= product.colour %></p>
@@ -13,5 +14,5 @@
     <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' },  class:'btn btn-danger' %>
 
   </div><!-- /col -->
-<%# end %>
+<% end %>
 

@@ -7860,3 +7860,224 @@ Processing by ProductsController#index as HTML
 Completed 200 OK in 46ms (Views: 44.9ms | ActiveRecord: 0.2ms)
 
 
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" ORDER BY "products"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/products" for 127.0.0.1 at 2017-12-02 11:51:18 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/nm/trails1-product-reviews/app/views/products/index.html.erb:9: syntax error, unexpected '%', expecting keyword_end
+'.freeze; end %
+               ^
+/home/nm/trails1-product-reviews/app/views/products/index.html.erb:11: unknown regexp options - dv
+/home/nm/trails1-product-reviews/app/views/products/index.html.erb:13: syntax error, unexpected '<'
+/home/nm/trails1-product-reviews/app/views/products/index.html.erb:21: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+put_buffer = _old_virtual_path, _old_output_buffer
+                              ^
+/home/nm/trails1-product-reviews/app/views/products/index.html.erb:21: syntax error, unexpected '\n', expecting '='):
+  
+app/views/products/index.html.erb:9: syntax error, unexpected '%', expecting keyword_end
+app/views/products/index.html.erb:11: unknown regexp options - dv
+app/views/products/index.html.erb:13: syntax error, unexpected '<'
+app/views/products/index.html.erb:21: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+app/views/products/index.html.erb:21: syntax error, unexpected '\n', expecting '='
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.6ms)
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (41.6ms)
+Started GET "/products" for 127.0.0.1 at 2017-12-02 11:51:20 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/nm/trails1-product-reviews/app/views/products/index.html.erb:9: syntax error, unexpected '%', expecting keyword_end
+'.freeze; end %
+               ^
+/home/nm/trails1-product-reviews/app/views/products/index.html.erb:11: unknown regexp options - dv
+/home/nm/trails1-product-reviews/app/views/products/index.html.erb:13: syntax error, unexpected '<'
+/home/nm/trails1-product-reviews/app/views/products/index.html.erb:21: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+put_buffer = _old_virtual_path, _old_output_buffer
+                              ^
+/home/nm/trails1-product-reviews/app/views/products/index.html.erb:21: syntax error, unexpected '\n', expecting '='):
+  
+app/views/products/index.html.erb:9: syntax error, unexpected '%', expecting keyword_end
+app/views/products/index.html.erb:11: unknown regexp options - dv
+app/views/products/index.html.erb:13: syntax error, unexpected '<'
+app/views/products/index.html.erb:21: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+app/views/products/index.html.erb:21: syntax error, unexpected '\n', expecting '='
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.3ms)
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (32.9ms)
+Started GET "/products" for 127.0.0.1 at 2017-12-02 11:51:32 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS "size", MAX("products"."updated_at") AS timestamp FROM "products"[0m
+Read fragment views/products/query-8983826560f83fe6d0fbc40908b20355-3-20171201171422890308/adbeef2cac6cb83357cd8831bb53c6f4 (0.1ms)
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [3 times] (3.0ms)
+Write fragment views/products/query-8983826560f83fe6d0fbc40908b20355-3-20171201171422890308/adbeef2cac6cb83357cd8831bb53c6f4 (0.1ms)
+  Rendered products/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 284ms (Views: 281.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/static_pages/about" for 127.0.0.1 at 2017-12-02 11:51:36 +0200
+Processing by StaticPagesController#about as HTML
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 45ms (Views: 43.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/contact" for 127.0.0.1 at 2017-12-02 11:51:36 +0200
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 58ms (Views: 56.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/landing_page" for 127.0.0.1 at 2017-12-02 11:51:37 +0200
+Processing by StaticPagesController#landing_page as HTML
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered static_pages/landing_page.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 47ms (Views: 44.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-12-02 11:51:38 +0200
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:UsersController> at /home/nm/trails1-product-reviews/app/controllers/users_controller.rb:3)
+Processing by UsersController#index as HTML
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-12-02 11:51:38 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 82ms (Views: 63.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-02 11:51:39 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "size", MAX("products"."updated_at") AS timestamp FROM "products"[0m
+Read fragment views/products/query-8983826560f83fe6d0fbc40908b20355-3-20171201171422890308/adbeef2cac6cb83357cd8831bb53c6f4 (0.1ms)
+  Rendered products/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 58ms (Views: 55.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/static_pages/index" for 127.0.0.1 at 2017-12-02 11:51:39 +0200
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 47ms (Views: 45.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/index" for 127.0.0.1 at 2017-12-02 11:52:54 +0200
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 40ms (Views: 38.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-02 11:52:57 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "size", MAX("products"."updated_at") AS timestamp FROM "products"[0m
+Read fragment views/products/query-8983826560f83fe6d0fbc40908b20355-3-20171201171422890308/bcc1e3f65499cda96c606cdeb20eb50f (0.1ms)
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Read fragment views/products/2-20171201171337673995/c00f94e700c58f1163d45600223c9e54 (0.1ms)
+Write fragment views/products/2-20171201171337673995/c00f94e700c58f1163d45600223c9e54 (0.1ms)
+Read fragment views/products/3-20171201171357009149/c00f94e700c58f1163d45600223c9e54 (0.0ms)
+Write fragment views/products/3-20171201171357009149/c00f94e700c58f1163d45600223c9e54 (0.0ms)
+Read fragment views/products/4-20171201171422890308/c00f94e700c58f1163d45600223c9e54 (0.0ms)
+Write fragment views/products/4-20171201171422890308/c00f94e700c58f1163d45600223c9e54 (0.1ms)
+  Rendered collection of products/_product.html.erb [3 times] (6.4ms)
+Write fragment views/products/query-8983826560f83fe6d0fbc40908b20355-3-20171201171422890308/bcc1e3f65499cda96c606cdeb20eb50f (0.1ms)
+  Rendered products/index.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 54ms (Views: 50.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/static_pages/about" for 127.0.0.1 at 2017-12-02 11:52:58 +0200
+Processing by StaticPagesController#about as HTML
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 58ms (Views: 56.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/contact" for 127.0.0.1 at 2017-12-02 11:52:59 +0200
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 47ms (Views: 44.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/landing_page" for 127.0.0.1 at 2017-12-02 11:52:59 +0200
+Processing by StaticPagesController#landing_page as HTML
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered static_pages/landing_page.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 48ms (Views: 45.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-12-02 11:53:00 +0200
+Processing by UsersController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-12-02 11:53:00 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 47ms (Views: 45.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-02 11:53:01 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) AS "size", MAX("products"."updated_at") AS timestamp FROM "products"[0m
+Read fragment views/products/query-8983826560f83fe6d0fbc40908b20355-3-20171201171422890308/bcc1e3f65499cda96c606cdeb20eb50f (0.1ms)
+  Rendered products/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 64ms (Views: 61.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2017-12-02 11:53:02 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered shared/_stripe_checkout_button.html.erb (0.6ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 2]]
+  Rendered products/show.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 83ms (Views: 47.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2017-12-02 11:55:07 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered shared/_stripe_checkout_button.html.erb (0.8ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 2]]
+  Rendered products/show.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 69ms (Views: 46.6ms | ActiveRecord: 1.9ms)
+
+
