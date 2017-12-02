@@ -8081,3 +8081,50 @@ Processing by ProductsController#show as HTML
 Completed 200 OK in 69ms (Views: 46.6ms | ActiveRecord: 1.9ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-12-02 17:48:22 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#landing_page as HTML
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered static_pages/landing_page.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 1643ms (Views: 1562.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/static_pages/about" for 127.0.0.1 at 2017-12-02 17:48:26 +0200
+Processing by StaticPagesController#about as HTML
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 44ms (Views: 43.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-02 17:48:27 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT MAX("products"."updated_at") FROM "products"[0m
+Read fragment views/products/all-3-20171201171422/c38d9f8aa55be5cc33d48d23ee32196b (0.1ms)
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Read fragment views/products/2-20171201171337673995/c00f94e700c58f1163d45600223c9e54 (0.0ms)
+Write fragment views/products/2-20171201171337673995/c00f94e700c58f1163d45600223c9e54 (0.1ms)
+Read fragment views/products/3-20171201171357009149/c00f94e700c58f1163d45600223c9e54 (0.0ms)
+Write fragment views/products/3-20171201171357009149/c00f94e700c58f1163d45600223c9e54 (0.1ms)
+Read fragment views/products/4-20171201171422890308/c00f94e700c58f1163d45600223c9e54 (0.1ms)
+Write fragment views/products/4-20171201171422890308/c00f94e700c58f1163d45600223c9e54 (0.1ms)
+  Rendered collection of products/_product.html.erb [3 times] (7.3ms)
+Write fragment views/products/all-3-20171201171422/c38d9f8aa55be5cc33d48d23ee32196b (0.1ms)
+  Rendered products/index.html.erb within layouts/application (36.0ms)
+Completed 200 OK in 130ms (Views: 111.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2017-12-02 17:48:30 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered shared/_stripe_checkout_button.html.erb (1.1ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 2]]
+  Rendered products/show.html.erb within layouts/application (178.1ms)
+Completed 200 OK in 332ms (Views: 221.1ms | ActiveRecord: 1.3ms)
+
+

@@ -58,6 +58,10 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # added to start starting page in 3.8 cf
 gem 'coffee-script-source', '1.8.0'
 
+gem 'dalli'
+
+gem 'redis-rails'
+
 # added Postgres QL databases for Heroku server 3.10 cf
 group :production do
   gem 'pg'
@@ -71,6 +75,8 @@ gem 'cancancan', '~> 1.10'
 
 # 5.9 for pagination
 gem 'will_paginate', '~> 3.1.0'
+
+
 
 
 
