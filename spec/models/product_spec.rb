@@ -1,27 +1,21 @@
-require 'rails_helper'
-
+require 'rails_helper' # also requires spec_helper and adds other stuff - if didnt need Rails just use spec_helper but unlikely
 
 describe Product do
 
-		context "when the product has comments" do
+    context "when the product has comments" do # create context
+      before do # before running the test...
+        @product = Product.create!(image_url: 'scarf1.jpg', name: "Scarf awesome", description: "I also created this product without using the HTML form!", price: 50, colour: "red")
+        @user = FactoryBot.create(:user)
+        #@user = User.create(:email => "polo@lolo.com", :password => "123polololo" )
+        @product.comments.create!(:rating => 1, :user => @user, :body => "hello")
+        @product.comments.create!(:rating => 3, :user => @user, :body => "good")
+        @product.comments.create!(:rating => 5, :user => @user, :body => "night")
+      end
 
-			let(:product) { Product.create(name: "Self Nero Mahdi") }
-			let(:user) { User.create(first_name: "Nermin", last_name: "Mahdi", email: "user@gmail.com", password: "test1234") }
+      it "returns the average rating of all comments" do
+        expect(@product.average_rating).to eq 3
+      end
 
-			before do
-		  		product.comments.create!(rating: 1, user: user, body: "Awful lotion!")
-		  		product.comments.create!(rating: 3, user: user, body: "Ok lotion!")
-		  		product.comments.create!(rating: 5, user: user, body: "Great tanning product! Absolutely loving it!")
-			end
-			end
+    end
 
-
-		context "A product without a description" do
-			let(:product) {Product.new(description: "Good product") }
-
-			it "is not valid without a name" do
-				expect(Product.new(description: "bad product")).not_to be_valid
-			end
-		end
-end
-
+end 
