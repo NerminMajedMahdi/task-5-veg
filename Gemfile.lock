@@ -213,7 +213,7 @@ DEPENDENCIES
   brakeman
   byebug
   cancancan (~> 1.10)
-  coffee-rails (~> 4.2)
+  coffee-rails
   coffee-script-source (= 1.8.0)
   dalli
   devise
