@@ -55,6 +55,7 @@ GEM
     coffee-script-source (1.8.0)
     concurrent-ruby (1.0.5)
     crass (1.0.3)
+    dalli (2.7.6)
     devise (4.3.0)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -231,6 +232,7 @@ DEPENDENCIES
   cancancan (~> 1.10)
   coffee-rails
   coffee-script-source (= 1.8.0)
+  dalli
   devise
   factory_bot_rails (~> 4.0)
   jbuilder (~> 2.5)
