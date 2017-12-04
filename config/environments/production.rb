@@ -100,6 +100,6 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  config.web_socket_server_url = "wss://magic-carpet99.herokuapp.com/cable"
-  config.action_cable.allowed_request_origins = ['https://magic-carpet99.herokuapp.com', 'http://magic-carpet99.herokuapp.com']
+  config.web_socket_server_url = "wss://vegtables.herokuapp.com/cable"
+  config.action_cable.allowed_request_origins = ['https://vegtables.herokuapp.com', 'http://vegtables.herokuapp.com']
 end
