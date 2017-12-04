@@ -2,7 +2,7 @@ function refreshRating() {
   $('.rating').raty({
     starHalf: '<%= asset_path "star-half.png" %>',
     starOff: '<%= asset_path "star-off.png" %>',
-    starOn: '<%= asset_path 'star-on.png' %>',
+    starOn: '<%= asset_path "star-on.png" %>',
     scoreName: 'comment[rating]'
   });
 
