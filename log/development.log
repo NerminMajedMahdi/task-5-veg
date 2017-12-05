@@ -17245,3 +17245,19 @@ Processing by StaticPagesController#index as HTML
 Completed 200 OK in 67ms (Views: 64.6ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/static_pages/index" for 127.0.0.1 at 2017-12-05 08:06:13 +0200
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 42ms (Views: 40.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/static_pages/index" for 127.0.0.1 at 2017-12-05 08:06:15 +0200
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 40ms (Views: 37.7ms | ActiveRecord: 0.2ms)
+
+
