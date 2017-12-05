@@ -80,7 +80,7 @@ gem 'cancancan', '~> 1.10'
 
 # 5.9 for pagination
 gem 'will_paginate', '~> 3.1.0'
-gem 'dalli'
+
 
 
 
