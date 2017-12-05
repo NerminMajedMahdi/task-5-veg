@@ -55,7 +55,7 @@ Rails.application.configure do
   config.log_tags = [ :request_id ]
 
 
-config.cache_classes = true
+
 config.action_controller.perform_caching = true
   # Use a different cache store in production.
    config.cache_store = :dalli_store 
