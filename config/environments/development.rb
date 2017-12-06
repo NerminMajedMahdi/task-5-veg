@@ -45,6 +45,12 @@ Rails.application.configure do
   # Suppress logger output for asset requests.
   config.assets.quiet = true
 
+  
+  #Change generator to create JavaSript instead of CoffeeScript
+config.app_generators.javascript_engine = :javascript
+
+
+
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 
@@ -54,5 +60,5 @@ Rails.application.configure do
 
   # 5.4 authentication: dynamic links that show up  inside emals from dev. env. generate right URLs
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
-   config.app_generators.javascript_engine = :javascript
+   
 end
