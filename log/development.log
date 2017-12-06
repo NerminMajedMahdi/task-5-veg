@@ -19123,3 +19123,24 @@ Processing by ProductsController#show as HTML
 Completed 200 OK in 78ms (Views: 72.2ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/products" for 127.0.0.1 at 2017-12-06 17:31:45 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS "size", MAX("products"."updated_at") AS timestamp FROM "products"[0m
+Read fragment views/products/query-8983826560f83fe6d0fbc40908b20355-3-20171201171422890308/9a68b17c9053f81b3c04662aca8635b1 (0.1ms)
+  Rendered products/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 366ms (Views: 356.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2017-12-06 17:31:46 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered shared/_stripe_checkout_button.html.erb (0.9ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 2]]
+  Rendered products/show.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 86ms (Views: 64.5ms | ActiveRecord: 1.9ms)
+
+
