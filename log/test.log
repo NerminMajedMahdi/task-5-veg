@@ -6237,3 +6237,85 @@ Completed 401 Unauthorized in 7ms (ActiveRecord: 0.1ms)
   [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "Adam"], ["last_name", "Krawczyk"], ["created_at", "2017-12-06 13:41:45.873932"], ["updated_at", "2017-12-06 13:41:45.873932"], ["email", "xxx@gmail.com"], ["encrypted_password", "$2a$04$rn05LY11UkuW5xMnb3b2HOl8RZtlBWCGbLo2RDLfi2B0AeN2s.Yze"]]
   [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user1@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "created_at", "updated_at", "email", "encrypted_password", "admin") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Nermin"], ["last_name", "Example"], ["created_at", "2017-12-06 15:17:37.450131"], ["updated_at", "2017-12-06 15:17:37.450131"], ["email", "user1@example.com"], ["encrypted_password", "$2a$04$4hrF7I.ulQHsva3m3l0XvuASYmm6W18O3BinJQi4pAHx0OY1LJati"], ["admin", "f"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user2@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "created_at", "updated_at", "email", "encrypted_password", "admin") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Nermin"], ["last_name", "Example"], ["created_at", "2017-12-06 15:17:37.455151"], ["updated_at", "2017-12-06 15:17:37.455151"], ["email", "user2@example.com"], ["encrypted_password", "$2a$04$iby/P/IIz7Iqf4DYwR60lOgtGQWbTq5bAZ7RqWVIG0DFn3PyEAaFW"], ["admin", "f"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 20ms (Views: 6.6ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user3@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "created_at", "updated_at", "email", "encrypted_password", "admin") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Nermin"], ["last_name", "Example"], ["created_at", "2017-12-06 15:17:37.485038"], ["updated_at", "2017-12-06 15:17:37.485038"], ["email", "user3@example.com"], ["encrypted_password", "$2a$04$Dn2/LpTyNdnUHNltemxUI.Qy4m1KjcpoaxLrIQGFN0YX/ttW71SXu"], ["admin", "f"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user4@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "created_at", "updated_at", "email", "encrypted_password", "admin") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Nermin"], ["last_name", "Example"], ["created_at", "2017-12-06 15:17:37.489611"], ["updated_at", "2017-12-06 15:17:37.489611"], ["email", "user4@example.com"], ["encrypted_password", "$2a$04$mvNXsIS2FKMSVnG90ML0K.KXdoQBhwpW3PcMoMoIjRKNp8zLI4RKK"], ["admin", "f"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://test.host/
+Completed 302 Found in 20ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user5@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "created_at", "updated_at", "email", "encrypted_password", "admin") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Nermin"], ["last_name", "Example"], ["created_at", "2017-12-06 15:17:37.519148"], ["updated_at", "2017-12-06 15:17:37.519148"], ["email", "user5@example.com"], ["encrypted_password", "$2a$04$/JvRp1S6e5Oyk1J3Ubh5iO3yTEXYOOgsjPUOHjuulUyM9cCIcTB1u"], ["admin", "f"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user6@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "created_at", "updated_at", "email", "encrypted_password", "admin") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Nermin"], ["last_name", "Example"], ["created_at", "2017-12-06 15:17:37.523702"], ["updated_at", "2017-12-06 15:17:37.523702"], ["email", "user6@example.com"], ["encrypted_password", "$2a$04$B204kOI39TklacM8J2BZbeoBsYE7kMGWXnDiVauylDtrlmJZRBhya"], ["admin", "f"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 401 Unauthorized in 7ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "image_url", "created_at", "updated_at", "colour", "price") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Scarf awesome"], ["description", "I also created this product without using the HTML form!"], ["image_url", "scarf1.jpg"], ["created_at", "2017-12-06 15:17:37.547336"], ["updated_at", "2017-12-06 15:17:37.547336"], ["colour", "red"], ["price", 50]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user7@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "created_at", "updated_at", "email", "encrypted_password", "admin") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Nermin"], ["last_name", "Example"], ["created_at", "2017-12-06 15:17:37.552331"], ["updated_at", "2017-12-06 15:17:37.552331"], ["email", "user7@example.com"], ["encrypted_password", "$2a$04$CPHqonSt.OH.GrPGlX8eAeVwCPhg7.M1RXU1tsHh3N3Se2MKntZzq"], ["admin", "f"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "body", "rating", "product_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["body", "hello"], ["rating", 1], ["product_id", 1], ["created_at", "2017-12-06 15:17:37.581085"], ["updated_at", "2017-12-06 15:17:37.581085"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "body", "rating", "product_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["body", "good"], ["rating", 3], ["product_id", 1], ["created_at", "2017-12-06 15:17:37.583625"], ["updated_at", "2017-12-06 15:17:37.583625"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "body", "rating", "product_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["body", "night"], ["rating", 5], ["product_id", 1], ["created_at", "2017-12-06 15:17:37.586718"], ["updated_at", "2017-12-06 15:17:37.586718"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "xxx@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "Adam"], ["last_name", "Krawczyk"], ["created_at", "2017-12-06 15:17:37.594065"], ["updated_at", "2017-12-06 15:17:37.594065"], ["email", "xxx@gmail.com"], ["encrypted_password", "$2a$04$qn4By6BjUIkUTwkBZpLWnuyxGWMezln0DeErXfUdlvpuCagjQOkai"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "xxx@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "Adam"], ["last_name", "Krawczyk"], ["created_at", "2017-12-06 15:17:37.600135"], ["updated_at", "2017-12-06 15:17:37.600135"], ["email", "xxx@gmail.com"], ["encrypted_password", "$2a$04$rWZuoRwjpd9BwowX7YeYf.A98x6pFdeHiyQOprt7SsloSNPvxcV8."]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
