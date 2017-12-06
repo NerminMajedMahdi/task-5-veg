@@ -18812,3 +18812,314 @@ Processing by ProductsController#show as HTML
 Completed 200 OK in 521ms (Views: 208.4ms | ActiveRecord: 1.4ms)
 
 
+Started GET "/products" for 127.0.0.1 at 2017-12-06 16:17:29 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) AS "size", MAX("products"."updated_at") AS timestamp FROM "products"[0m
+Read fragment views/products/query-8983826560f83fe6d0fbc40908b20355-3-20171201171422890308/9a68b17c9053f81b3c04662aca8635b1 (0.1ms)
+  Rendered products/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 409ms (Views: 406.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2017-12-06 16:17:31 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered shared/_stripe_checkout_button.html.erb (0.9ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 2]]
+  Rendered products/show.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 67ms (Views: 62.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-06 16:34:35 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS "size", MAX("products"."updated_at") AS timestamp FROM "products"[0m
+Read fragment views/products/query-8983826560f83fe6d0fbc40908b20355-3-20171201171422890308/9a68b17c9053f81b3c04662aca8635b1 (0.1ms)
+  Rendered products/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 72ms (Views: 69.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2017-12-06 16:34:36 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered shared/_stripe_checkout_button.html.erb (0.9ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 2]]
+  Rendered products/show.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 72ms (Views: 67.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-06 16:36:22 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS "size", MAX("products"."updated_at") AS timestamp FROM "products"[0m
+Read fragment views/products/query-8983826560f83fe6d0fbc40908b20355-3-20171201171422890308/9a68b17c9053f81b3c04662aca8635b1 (0.1ms)
+  Rendered products/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 75ms (Views: 72.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/3" for 127.0.0.1 at 2017-12-06 16:36:24 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered shared/_stripe_checkout_button.html.erb (0.6ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 3]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 3]]
+  Rendered products/show.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 40ms (Views: 36.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-06 16:44:44 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS "size", MAX("products"."updated_at") AS timestamp FROM "products"[0m
+Read fragment views/products/query-8983826560f83fe6d0fbc40908b20355-3-20171201171422890308/9a68b17c9053f81b3c04662aca8635b1 (0.1ms)
+  Rendered products/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 152ms (Views: 150.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-06 16:44:45 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "size", MAX("products"."updated_at") AS timestamp FROM "products"[0m
+Read fragment views/products/query-8983826560f83fe6d0fbc40908b20355-3-20171201171422890308/9a68b17c9053f81b3c04662aca8635b1 (0.2ms)
+  Rendered products/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 45ms (Views: 43.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2017-12-06 16:44:45 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered shared/_stripe_checkout_button.html.erb (0.8ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 2]]
+  Rendered products/show.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 51ms (Views: 45.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-06 16:44:57 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS "size", MAX("products"."updated_at") AS timestamp FROM "products"[0m
+Read fragment views/products/query-8983826560f83fe6d0fbc40908b20355-3-20171201171422890308/9a68b17c9053f81b3c04662aca8635b1 (0.1ms)
+  Rendered products/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 54ms (Views: 52.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-06 16:44:57 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) AS "size", MAX("products"."updated_at") AS timestamp FROM "products"[0m
+Read fragment views/products/query-8983826560f83fe6d0fbc40908b20355-3-20171201171422890308/9a68b17c9053f81b3c04662aca8635b1 (0.1ms)
+  Rendered products/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 41ms (Views: 38.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2017-12-06 16:44:58 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered shared/_stripe_checkout_button.html.erb (1.0ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 2]]
+  Rendered products/show.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 51ms (Views: 46.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/static_pages/about" for 127.0.0.1 at 2017-12-06 16:45:12 +0200
+Processing by StaticPagesController#about as HTML
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 33ms (Views: 31.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/contact" for 127.0.0.1 at 2017-12-06 16:45:13 +0200
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 43ms (Views: 41.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/landing_page" for 127.0.0.1 at 2017-12-06 16:45:13 +0200
+Processing by StaticPagesController#landing_page as HTML
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered static_pages/landing_page.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 38ms (Views: 36.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/static_pages/landing_page" for 127.0.0.1 at 2017-12-06 16:45:14 +0200
+Processing by StaticPagesController#landing_page as HTML
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered static_pages/landing_page.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 39ms (Views: 36.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-12-06 16:45:15 +0200
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:UsersController> at /home/nm/trails1-product-reviews/app/controllers/users_controller.rb:3)
+Processing by UsersController#index as HTML
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-12-06 16:45:15 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (45.8ms)
+Completed 200 OK in 98ms (Views: 77.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-06 16:45:15 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) AS "size", MAX("products"."updated_at") AS timestamp FROM "products"[0m
+Read fragment views/products/query-8983826560f83fe6d0fbc40908b20355-3-20171201171422890308/9a68b17c9053f81b3c04662aca8635b1 (0.1ms)
+  Rendered products/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 44ms (Views: 42.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2017-12-06 16:45:19 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered shared/_stripe_checkout_button.html.erb (1.0ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 2]]
+  Rendered products/show.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 87ms (Views: 82.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-06 16:46:38 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS "size", MAX("products"."updated_at") AS timestamp FROM "products"[0m
+Read fragment views/products/query-8983826560f83fe6d0fbc40908b20355-3-20171201171422890308/9a68b17c9053f81b3c04662aca8635b1 (0.1ms)
+  Rendered products/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 81ms (Views: 79.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-06 16:46:38 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS "size", MAX("products"."updated_at") AS timestamp FROM "products"[0m
+Read fragment views/products/query-8983826560f83fe6d0fbc40908b20355-3-20171201171422890308/9a68b17c9053f81b3c04662aca8635b1 (0.1ms)
+  Rendered products/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 53ms (Views: 51.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2017-12-06 16:46:41 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered shared/_stripe_checkout_button.html.erb (0.9ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 2]]
+  Rendered products/show.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 51ms (Views: 44.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-06 16:47:07 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) AS "size", MAX("products"."updated_at") AS timestamp FROM "products"[0m
+Read fragment views/products/query-8983826560f83fe6d0fbc40908b20355-3-20171201171422890308/9a68b17c9053f81b3c04662aca8635b1 (0.1ms)
+  Rendered products/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 58ms (Views: 55.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-06 16:47:07 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS "size", MAX("products"."updated_at") AS timestamp FROM "products"[0m
+Read fragment views/products/query-8983826560f83fe6d0fbc40908b20355-3-20171201171422890308/9a68b17c9053f81b3c04662aca8635b1 (0.1ms)
+  Rendered products/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 38ms (Views: 36.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2017-12-06 16:47:08 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered shared/_stripe_checkout_button.html.erb (0.8ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 2]]
+  Rendered products/show.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 54ms (Views: 49.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-06 16:49:20 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS "size", MAX("products"."updated_at") AS timestamp FROM "products"[0m
+Read fragment views/products/query-8983826560f83fe6d0fbc40908b20355-3-20171201171422890308/9a68b17c9053f81b3c04662aca8635b1 (0.1ms)
+  Rendered products/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 70ms (Views: 59.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2017-12-06 16:49:21 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered shared/_stripe_checkout_button.html.erb (1.1ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 2]]
+  Rendered products/show.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 84ms (Views: 57.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-06 16:49:38 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "size", MAX("products"."updated_at") AS timestamp FROM "products"[0m
+Read fragment views/products/query-8983826560f83fe6d0fbc40908b20355-3-20171201171422890308/9a68b17c9053f81b3c04662aca8635b1 (0.1ms)
+  Rendered products/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 51ms (Views: 48.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products/3" for 127.0.0.1 at 2017-12-06 16:49:39 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered shared/_stripe_checkout_button.html.erb (0.9ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 3]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 3]]
+  Rendered products/show.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 48ms (Views: 43.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-06 16:53:21 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) AS "size", MAX("products"."updated_at") AS timestamp FROM "products"[0m
+Read fragment views/products/query-8983826560f83fe6d0fbc40908b20355-3-20171201171422890308/9a68b17c9053f81b3c04662aca8635b1 (0.1ms)
+  Rendered products/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 53ms (Views: 51.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2017-12-06 16:53:22 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered shared/_stripe_checkout_button.html.erb (0.6ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 2]]
+  Rendered products/show.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 78ms (Views: 72.2ms | ActiveRecord: 0.8ms)
+
+

@@ -1,8 +1,13 @@
-('.product-reviews').prepend("<%= j render @comment %>");
+$('.product-reviews').prepend("<%= j render @comment %>");
 $("#new_comment").html("Thank you for your review!");
 $("#average-rating").attr('data-score', "<%= @product.average_rating %>");
 
 
 
 
+$(document).on('turbolinks:load', function() {
+
+	$(".alert, .notice").delay(2000).fadeOut(1000);
+
 refreshRating();
+
