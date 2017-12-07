@@ -1,8 +1,8 @@
 <div class="product-reviews">
-  <% cache @comments do %> <!--cache for comments-->
+ 
     <% @comments.each do |comment| %>
       <%= render comment %>
-    <% end %>
+  
   <% end %>
 </div>
 
