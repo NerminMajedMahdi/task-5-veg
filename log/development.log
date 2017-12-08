@@ -30602,3 +30602,1438 @@ Processing by ProductsController#show as HTML
 Completed 200 OK in 96ms (Views: 90.1ms | ActiveRecord: 2.0ms)
 
 
+Started GET "/products" for 127.0.0.1 at 2017-12-08 20:32:14 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [3 times] (4.3ms)
+  Rendered products/index.html.erb within layouts/application (9.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 110ms (Views: 107.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-08 20:32:15 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [3 times] (4.5ms)
+  Rendered products/index.html.erb within layouts/application (7.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 51ms (Views: 48.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2017-12-08 20:32:19 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered shared/_stripe_checkout_button.html.erb (1.0ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 2]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered products/_new_comment.html.erb (2.7ms)
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ? ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["product_id", 2], ["LIMIT", 5], ["OFFSET", 0]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of comments/_comment.html.erb [5 times] (12.1ms)
+  Rendered products/_comments.html.erb (16.1ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 2]]
+  Rendered products/show.html.erb within layouts/application (33.3ms)
+Completed 200 OK in 78ms (Views: 70.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/products/2/edit" for 127.0.0.1 at 2017-12-08 20:32:31 +0200
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (4.6ms)
+  Rendered products/edit.html.erb within layouts/application (6.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 49ms (Views: 46.0ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/products/2" for 127.0.0.1 at 2017-12-08 20:32:37 +0200
+Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dN0AvTgGbHmSZCdr0hD/rEn4niK/MHiuWX0xn7KkyfEs4O1MTISFefmeFf+QvshA2iDmsylbhHrqCQd85Db4QQ==", "product"=>{"name"=>"mixed-veg", "description"=>"Nice Products", "image_url"=>"https://static.pexels.com/photos/36764/marguerite-daisy-beautiful-beauty.jpg", "colour"=>"mdesad", "price"=>"10"}, "commit"=>"Update Product", "id"=>"2"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/products
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-08 20:32:38 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [3 times] (2.8ms)
+  Rendered products/index.html.erb within layouts/application (6.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 44ms (Views: 41.4ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/products/2" for 127.0.0.1 at 2017-12-08 20:36:21 +0200
+Processing by ProductsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ZIvcFBNjS+zzkTE1r/f6xYlpEyODXdga4VtRG0tivp08tjHlZ+Gi7JhrA6HtWc0pGrFrshU2JM5SL2f4HfCPLQ==", "id"=>"2"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  [1m[35m (65.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/products
+Completed 302 Found in 71ms (ActiveRecord: 66.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-08 20:36:21 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [2 times] (1.7ms)
+  Rendered products/index.html.erb within layouts/application (3.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 42ms (Views: 40.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products/3/edit" for 127.0.0.1 at 2017-12-08 20:36:32 +0200
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (6.3ms)
+  Rendered products/edit.html.erb within layouts/application (8.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 54ms (Views: 52.2ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/products/3" for 127.0.0.1 at 2017-12-08 20:36:34 +0200
+Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A6kU4EC6C2aqDAv90PcOU1qZDZF7lyfDg1Qfcx9SKPlblPkRNDjiZsH2OWmSWTm/yUF1AO382xcwICmQScAZSQ==", "product"=>{"name"=>"mixed-veg", "description"=>"xcvxcvxc", "image_url"=>"https://static.pexels.com/photos/69465/tulips-garden-flowers-color-69465.jpeg", "colour"=>"yallow", "price"=>"19"}, "commit"=>"Update Product", "id"=>"3"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/products
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-08 20:36:34 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [2 times] (3.0ms)
+  Rendered products/index.html.erb within layouts/application (5.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 44ms (Views: 42.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-08 20:41:27 +0200
+  
+SyntaxError (/home/nm/trails1-product-reviews/app/models/user.rb:3: syntax error, unexpected ',', expecting =>
+  :confirmable, :lockable, :timeoutable and :omniauthabl
+                          ^):
+  
+app/models/user.rb:3: syntax error, unexpected ',', expecting =>
+config/routes.rb:3:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.2ms)
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (32.2ms)
+Started GET "/products" for 127.0.0.1 at 2017-12-08 20:42:53 +0200
+  
+SyntaxError (/home/nm/trails1-product-reviews/app/models/user.rb:3: syntax error, unexpected ',', expecting =>
+   :confirmable, :lockable, :timeoutable and :omniauthabl
+                           ^):
+  
+app/models/user.rb:3: syntax error, unexpected ',', expecting =>
+config/routes.rb:3:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.2ms)
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (32.8ms)
+Started GET "/products" for 127.0.0.1 at 2017-12-08 20:42:54 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/products"):
+  
+actionpack (5.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered collection of /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb [8 times] (41.1ms)
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (19.2ms)
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (112.8ms)
+Started GET "/products" for 127.0.0.1 at 2017-12-08 20:42:57 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/products"):
+  
+actionpack (5.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered collection of /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb [8 times] (3.2ms)
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (35.8ms)
+Started GET "/products" for 127.0.0.1 at 2017-12-08 20:43:11 +0200
+  
+SyntaxError (/home/nm/trails1-product-reviews/app/models/user.rb:3: syntax error, unexpected ',', expecting =>
+   :confirmable, :lockable, :timeoutable and :omniauthabl
+                           ^):
+  
+app/models/user.rb:3: syntax error, unexpected ',', expecting =>
+config/routes.rb:3:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.5ms)
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (33.4ms)
+Started GET "/products" for 127.0.0.1 at 2017-12-08 20:43:12 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/products"):
+  
+actionpack (5.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered collection of /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb [8 times] (3.3ms)
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.9ms)
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (38.9ms)
+Started GET "/products" for 127.0.0.1 at 2017-12-08 20:43:14 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/products"):
+  
+actionpack (5.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered collection of /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb [8 times] (5.6ms)
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.3ms)
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (55.6ms)
+Started GET "/products" for 127.0.0.1 at 2017-12-08 20:44:56 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [2 times] (2.1ms)
+  Rendered products/index.html.erb within layouts/application (13.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 69ms (Views: 61.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-08 20:46:00 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [2 times] (2.1ms)
+  Rendered products/index.html.erb within layouts/application (13.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 72ms (Views: 63.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-08 20:46:01 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [2 times] (4.8ms)
+  Rendered products/index.html.erb within layouts/application (8.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 64ms (Views: 62.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/products/3" for 127.0.0.1 at 2017-12-08 20:46:03 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered shared/_stripe_checkout_button.html.erb (0.6ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 3]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered products/_new_comment.html.erb (13.9ms)
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ? ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["product_id", 3], ["LIMIT", 5], ["OFFSET", 0]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of comments/_comment.html.erb [5 times] (8.2ms)
+  Rendered products/_comments.html.erb (10.6ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 3]]
+  Rendered products/show.html.erb within layouts/application (37.4ms)
+Completed 200 OK in 89ms (Views: 71.9ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-08 20:46:19 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [2 times] (3.2ms)
+  Rendered products/index.html.erb within layouts/application (6.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 76ms (Views: 73.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-08 20:47:45 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [2 times] (3.4ms)
+  Rendered products/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 67ms (Views: 65.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-08 20:48:49 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [2 times] (3.8ms)
+  Rendered products/index.html.erb within layouts/application (19.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 84ms (Views: 75.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/products/3" for 127.0.0.1 at 2017-12-08 20:48:51 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered shared/_stripe_checkout_button.html.erb (1.3ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 3]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered products/_new_comment.html.erb (15.5ms)
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ? ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["product_id", 3], ["LIMIT", 5], ["OFFSET", 0]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of comments/_comment.html.erb [5 times] (14.1ms)
+  Rendered products/_comments.html.erb (18.4ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 3]]
+  Rendered products/show.html.erb within layouts/application (55.9ms)
+Completed 200 OK in 137ms (Views: 120.0ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/static_pages/index" for 127.0.0.1 at 2017-12-08 20:48:54 +0200
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 51ms (Views: 49.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-08 20:48:57 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [2 times] (3.2ms)
+  Rendered products/index.html.erb within layouts/application (6.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 66ms (Views: 63.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/products/3" for 127.0.0.1 at 2017-12-08 20:49:12 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered shared/_stripe_checkout_button.html.erb (1.0ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 3]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered products/_new_comment.html.erb (17.7ms)
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ? ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["product_id", 3], ["LIMIT", 5], ["OFFSET", 0]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of comments/_comment.html.erb [5 times] (13.1ms)
+  Rendered products/_comments.html.erb (17.5ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 3]]
+  Rendered products/show.html.erb within layouts/application (81.7ms)
+Completed 200 OK in 188ms (Views: 142.4ms | ActiveRecord: 7.1ms)
+
+
+Started DELETE "/products/3" for 127.0.0.1 at 2017-12-08 20:49:32 +0200
+Processing by ProductsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"zU1p+WuelS16Lqd6SCqdunuLEIl81pRmZTCecUljSlaVcIQIHxx8LRHUle4KhKpW6FNoGOq9aLLWRKiSH/F75g==", "id"=>"3"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 3]]
+  [1m[35m (71.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/products
+Completed 302 Found in 78ms (ActiveRecord: 71.9ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-08 20:49:32 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [1 times] (1.8ms)
+  Rendered products/index.html.erb within layouts/application (5.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 62ms (Views: 59.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/products/4" for 127.0.0.1 at 2017-12-08 20:51:11 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered shared/_stripe_checkout_button.html.erb (0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 4]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered products/_new_comment.html.erb (9.7ms)
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ? ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["product_id", 4], ["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered products/_comments.html.erb (1.6ms)
+  Rendered products/show.html.erb within layouts/application (33.8ms)
+Completed 200 OK in 90ms (Views: 67.6ms | ActiveRecord: 3.0ms)
+
+
+Started DELETE "/products/4" for 127.0.0.1 at 2017-12-08 20:51:19 +0200
+Processing by ProductsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"DTmxoWl1O7LehgFOMT8OrmlsxYwIgOnhTZESVK/LKfZVBFxQHffSsrV8M9pzkTlC+rS9HZ7rFTX+5SS3+VkYRg==", "id"=>"4"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 4]]
+  [1m[35m (97.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/products
+Completed 302 Found in 105ms (ActiveRecord: 98.6ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-08 20:51:19 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered products/index.html.erb within layouts/application (2.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 44ms (Views: 40.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-08 20:51:23 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered products/index.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 43ms (Views: 40.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2017-12-08 20:51:26 +0200
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (3.7ms)
+  Rendered products/new.html.erb within layouts/application (5.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 49ms (Views: 46.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2017-12-08 20:51:38 +0200
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZXrUWy5t4I6fpodJq4h1NYm26QRnSvR+Y/zrB6QnY6A9RzmqWu8JjvRctd3pJkLZGm6RlfEhCKrQiN3k8rVSEA==", "product"=>{"name"=>"flowers1", "description"=>"شيبسشبشسب", "image_url"=>"https://static.pexels.com/photos/36764/marguerite-daisy-beautiful-beauty.jpg", "colour"=>"yallow", "price"=>"44"}, "commit"=>"Create Product"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "image_url", "created_at", "updated_at", "colour", "price") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "flowers1"], ["description", "شيبسشبشسب"], ["image_url", "https://static.pexels.com/photos/36764/marguerite-daisy-beautiful-beauty.jpg"], ["created_at", "2017-12-08 18:51:38.330794"], ["updated_at", "2017-12-08 18:51:38.330794"], ["colour", "yallow"], ["price", 44]]
+  [1m[35m (160.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/products/5
+Completed 302 Found in 166ms (ActiveRecord: 160.9ms)
+
+
+Started GET "/products/5" for 127.0.0.1 at 2017-12-08 20:51:38 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered shared/_stripe_checkout_button.html.erb (1.0ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 5]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered products/_new_comment.html.erb (2.2ms)
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ? ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["product_id", 5], ["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered products/_comments.html.erb (1.3ms)
+  Rendered products/show.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 50ms (Views: 46.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-08 20:51:45 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [1 times] (1.9ms)
+  Rendered products/index.html.erb within layouts/application (5.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 49ms (Views: 46.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2017-12-08 20:51:49 +0200
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (5.9ms)
+  Rendered products/new.html.erb within layouts/application (7.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 50ms (Views: 46.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2017-12-08 20:52:03 +0200
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cfWBkfrRjiMwOJF/kMove+xS9yaE65KrrEsNWUJdv+UpyGxgjlNnI1vCo+vSZBiXf4qPtxKAbn8fPzu6FM+OVQ==", "product"=>{"name"=>"Flower3", "description"=>"ئيشسش", "image_url"=>"https://static.pexels.com/photos/208453/pexels-photo-208453.jpeg", "colour"=>"Orange", "price"=>"19"}, "commit"=>"Create Product"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "image_url", "created_at", "updated_at", "colour", "price") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Flower3"], ["description", "ئيشسش"], ["image_url", "https://static.pexels.com/photos/208453/pexels-photo-208453.jpeg"], ["created_at", "2017-12-08 18:52:03.545768"], ["updated_at", "2017-12-08 18:52:03.545768"], ["colour", "Orange"], ["price", 19]]
+  [1m[35m (162.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/products/6
+Completed 302 Found in 166ms (ActiveRecord: 162.4ms)
+
+
+Started GET "/products/6" for 127.0.0.1 at 2017-12-08 20:52:03 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered shared/_stripe_checkout_button.html.erb (0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 6]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered products/_new_comment.html.erb (2.9ms)
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ? ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["product_id", 6], ["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered products/_comments.html.erb (1.6ms)
+  Rendered products/show.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 52ms (Views: 47.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-08 20:52:09 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [2 times] (3.3ms)
+  Rendered products/index.html.erb within layouts/application (7.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 53ms (Views: 50.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products/6" for 127.0.0.1 at 2017-12-08 20:53:00 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered shared/_stripe_checkout_button.html.erb (0.6ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 6]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered products/_new_comment.html.erb (10.7ms)
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ? ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["product_id", 6], ["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered products/_comments.html.erb (1.4ms)
+  Rendered products/show.html.erb within layouts/application (35.0ms)
+Completed 200 OK in 102ms (Views: 72.4ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-08 20:53:04 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [2 times] (3.3ms)
+  Rendered products/index.html.erb within layouts/application (8.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 63ms (Views: 60.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/products/6/edit" for 127.0.0.1 at 2017-12-08 20:53:06 +0200
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (5.6ms)
+  Rendered products/edit.html.erb within layouts/application (7.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 56ms (Views: 52.3ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/products/6" for 127.0.0.1 at 2017-12-08 20:53:08 +0200
+Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IEt1AfAvIcBKGjw9/rV6lo6UCsrfmjAOqb0XpE7VF7V4dpjwhK3IwCHgDqm8G016HUxyW0nxzNoaySFHGEcmBQ==", "product"=>{"name"=>"Flower3", "description"=>"ئيشسش", "image_url"=>"https://static.pexels.com/photos/208453/pexels-photo-208453.jpeg", "colour"=>"Orange", "price"=>"19"}, "commit"=>"Update Product", "id"=>"6"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/products
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-08 20:53:08 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [2 times] (2.1ms)
+  Rendered products/index.html.erb within layouts/application (4.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 42ms (Views: 40.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products/6" for 127.0.0.1 at 2017-12-08 20:53:09 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered shared/_stripe_checkout_button.html.erb (1.0ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 6]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered products/_new_comment.html.erb (2.7ms)
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ? ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["product_id", 6], ["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered products/_comments.html.erb (1.5ms)
+  Rendered products/show.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 62ms (Views: 56.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-08 20:53:12 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [2 times] (3.5ms)
+  Rendered products/index.html.erb within layouts/application (8.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 69ms (Views: 65.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-08 20:57:06 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [2 times] (5.1ms)
+  Rendered products/index.html.erb within layouts/application (15.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 82ms (Views: 71.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-08 20:57:07 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [2 times] (3.9ms)
+  Rendered products/index.html.erb within layouts/application (7.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 74ms (Views: 72.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products/5" for 127.0.0.1 at 2017-12-08 20:57:08 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered shared/_stripe_checkout_button.html.erb (0.9ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 5]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered products/_new_comment.html.erb (10.5ms)
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ? ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["product_id", 5], ["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered products/_comments.html.erb (1.4ms)
+  Rendered products/show.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 74ms (Views: 58.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-08 20:57:11 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [2 times] (3.9ms)
+  Rendered products/index.html.erb within layouts/application (8.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 64ms (Views: 62.2ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/products/6" for 127.0.0.1 at 2017-12-08 20:57:15 +0200
+Processing by ProductsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"S9HkpZ0YGK0sV0AhadhlWFBOiRkhkz3zq/aJcPEC1VwT7AlU6ZrxrUetcrUrdlK0w5bxiLf4wScYgr+Tp5Dk7A==", "id"=>"6"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 6]]
+  [1m[35m (112.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/products
+Completed 302 Found in 116ms (ActiveRecord: 112.8ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-08 20:57:15 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [1 times] (1.7ms)
+  Rendered products/index.html.erb within layouts/application (4.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 44ms (Views: 42.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2017-12-08 20:57:22 +0200
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (7.1ms)
+  Rendered products/new.html.erb within layouts/application (9.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 55ms (Views: 52.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2017-12-08 20:57:35 +0200
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Yrh0Zg3jwmOcbUT2tSpzuTzitxzRanTJhojFUQIii2U6hZmXeWErY/eXdmL3hERVrzrPjUcBiB01/POyVLC61Q==", "product"=>{"name"=>"mixed-veg", "description"=>"بشسيبسيش", "image_url"=>"https://static.pexels.com/photos/69465/tulips-garden-flowers-color-69465.jpeg", "colour"=>"Orange", "price"=>"10"}, "commit"=>"Create Product"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "image_url", "created_at", "updated_at", "colour", "price") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "mixed-veg"], ["description", "بشسيبسيش"], ["image_url", "https://static.pexels.com/photos/69465/tulips-garden-flowers-color-69465.jpeg"], ["created_at", "2017-12-08 18:57:35.419883"], ["updated_at", "2017-12-08 18:57:35.419883"], ["colour", "Orange"], ["price", 10]]
+  [1m[35m (158.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/products/7
+Completed 302 Found in 166ms (ActiveRecord: 159.2ms)
+
+
+Started GET "/products/7" for 127.0.0.1 at 2017-12-08 20:57:35 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered shared/_stripe_checkout_button.html.erb (0.7ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 7]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered products/_new_comment.html.erb (2.1ms)
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ? ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["product_id", 7], ["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered products/_comments.html.erb (1.9ms)
+  Rendered products/show.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 53ms (Views: 47.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-08 20:57:40 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [2 times] (3.6ms)
+  Rendered products/index.html.erb within layouts/application (6.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 54ms (Views: 51.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-08 21:00:08 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [2 times] (4.5ms)
+  Rendered products/index.html.erb within layouts/application (21.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 87ms (Views: 76.6ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/static_pages/index" for 127.0.0.1 at 2017-12-08 21:00:09 +0200
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 54ms (Views: 51.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-08 21:00:10 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [2 times] (3.7ms)
+  Rendered products/index.html.erb within layouts/application (8.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 76ms (Views: 73.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/static_pages/about" for 127.0.0.1 at 2017-12-08 21:00:11 +0200
+Processing by StaticPagesController#about as HTML
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 48ms (Views: 45.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/static_pages/contact" for 127.0.0.1 at 2017-12-08 21:00:12 +0200
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 47ms (Views: 43.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/static_pages/landing_page" for 127.0.0.1 at 2017-12-08 21:00:12 +0200
+Processing by StaticPagesController#landing_page as HTML
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered static_pages/landing_page.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 46ms (Views: 43.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-12-08 21:00:13 +0200
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:UsersController> at /home/nm/trails1-product-reviews/app/controllers/users_controller.rb:3)
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.2ms)
+
+
+  
+NameError (uninitialized constant Ability::OrderProduct):
+  
+app/models/ability.rb:11:in `initialize'
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.9ms)
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (33.0ms)
+Started GET "/users" for 127.0.0.1 at 2017-12-08 21:00:42 +0200
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:UsersController> at /home/nm/trails1-product-reviews/app/controllers/users_controller.rb:3)
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 36ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-08 21:00:42 +0200
+Processing by StaticPagesController#landing_page as HTML
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered static_pages/landing_page.html.erb within layouts/application (10.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 52ms (Views: 46.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-08 21:00:53 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [2 times] (3.5ms)
+  Rendered products/index.html.erb within layouts/application (7.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 68ms (Views: 65.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/products/7" for 127.0.0.1 at 2017-12-08 21:00:55 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered shared/_stripe_checkout_button.html.erb (1.0ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 7]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered products/_new_comment.html.erb (11.3ms)
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ? ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["product_id", 7], ["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered products/_comments.html.erb (1.3ms)
+  Rendered products/show.html.erb within layouts/application (24.5ms)
+Completed 200 OK in 70ms (Views: 61.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-08 21:01:00 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [2 times] (3.3ms)
+  Rendered products/index.html.erb within layouts/application (7.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 74ms (Views: 70.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/static_pages/about" for 127.0.0.1 at 2017-12-08 21:03:36 +0200
+  
+SyntaxError (/home/nm/trails1-product-reviews/app/models/user.rb:3: syntax error, unexpected ',', expecting keyword_end
+   :confirmable, :lockable, :timeoutable and :
+                ^):
+  
+app/models/user.rb:3: syntax error, unexpected ',', expecting keyword_end
+config/routes.rb:3:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.5ms)
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (33.8ms)
+Started GET "/static_pages/about" for 127.0.0.1 at 2017-12-08 21:04:03 +0200
+Processing by StaticPagesController#about as HTML
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 53ms (Views: 50.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-08 21:05:35 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [2 times] (2.3ms)
+  Rendered products/index.html.erb within layouts/application (13.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 70ms (Views: 62.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-08 21:13:51 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [2 times] (3.3ms)
+  Rendered products/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 64ms (Views: 62.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-08 21:20:22 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [2 times] (2.2ms)
+  Rendered products/index.html.erb within layouts/application (13.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 72ms (Views: 64.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-08 21:20:23 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [2 times] (2.6ms)
+  Rendered products/index.html.erb within layouts/application (5.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 70ms (Views: 67.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-08 21:20:24 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [2 times] (2.9ms)
+  Rendered products/index.html.erb within layouts/application (5.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 51ms (Views: 48.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-12-08 21:20:26 +0200
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:UsersController> at /home/nm/trails1-product-reviews/app/controllers/users_controller.rb:3)
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.3ms)
+
+
+  
+NameError (undefined local variable or method `role' for #<User:0xb31e2ec8>):
+  
+app/models/user.rb:14:in `admin?'
+app/models/ability.rb:6:in `initialize'
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.7ms)
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (31.7ms)
+Started GET "/users" for 127.0.0.1 at 2017-12-08 21:25:12 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.3ms)
+
+
+  
+NameError (undefined local variable or method `role' for #<User:0xb0f116c4>):
+  
+app/models/user.rb:14:in `admin?'
+app/models/ability.rb:6:in `initialize'
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.9ms)
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (33.3ms)
+Started GET "/users" for 127.0.0.1 at 2017-12-08 21:25:13 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.3ms)
+
+
+  
+NameError (undefined local variable or method `role' for #<User:0xafc190f8>):
+  
+app/models/user.rb:14:in `admin?'
+app/models/ability.rb:6:in `initialize'
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.0ms)
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (31.2ms)
+Started GET "/users" for 127.0.0.1 at 2017-12-08 21:25:29 +0200
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:UsersController> at /home/nm/trails1-product-reviews/app/controllers/users_controller.rb:3)
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 36ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-08 21:25:29 +0200
+Processing by StaticPagesController#landing_page as HTML
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered static_pages/landing_page.html.erb within layouts/application (10.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 58ms (Views: 50.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-08 21:30:19 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [2 times] (2.2ms)
+  Rendered products/index.html.erb within layouts/application (14.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 70ms (Views: 62.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-08 21:30:20 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [2 times] (2.1ms)
+  Rendered products/index.html.erb within layouts/application (4.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 43ms (Views: 41.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products/5" for 127.0.0.1 at 2017-12-08 21:30:21 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered shared/_stripe_checkout_button.html.erb (0.8ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 5]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered products/_new_comment.html.erb (13.4ms)
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ? ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["product_id", 5], ["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered products/_comments.html.erb (1.4ms)
+  Rendered products/show.html.erb within layouts/application (25.8ms)
+Completed 200 OK in 73ms (Views: 61.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/static_pages/index" for 127.0.0.1 at 2017-12-08 21:30:23 +0200
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 46ms (Views: 43.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-08 21:30:24 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [2 times] (3.5ms)
+  Rendered products/index.html.erb within layouts/application (7.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 77ms (Views: 74.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-08 21:31:45 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [2 times] (2.3ms)
+  Rendered products/index.html.erb within layouts/application (14.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 71ms (Views: 63.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/static_pages/about" for 127.0.0.1 at 2017-12-08 21:31:46 +0200
+Processing by StaticPagesController#about as HTML
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 43ms (Views: 41.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/static_pages/contact" for 127.0.0.1 at 2017-12-08 21:31:47 +0200
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 58ms (Views: 56.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/static_pages/landing_page" for 127.0.0.1 at 2017-12-08 21:31:48 +0200
+Processing by StaticPagesController#landing_page as HTML
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered static_pages/landing_page.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 49ms (Views: 46.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-12-08 21:31:48 +0200
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:UsersController> at /home/nm/trails1-product-reviews/app/controllers/users_controller.rb:3)
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `role?' for #<User:0xaf910514>):
+  
+app/models/ability.rb:7:in `initialize'
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.9ms)
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (32.5ms)
+Started GET "/users" for 127.0.0.1 at 2017-12-08 21:32:39 +0200
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:UsersController> at /home/nm/trails1-product-reviews/app/controllers/users_controller.rb:3)
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 1.4ms)
+
+
+  
+NoMethodError (undefined method `role?' for #<User:0xafe12cb0>):
+  
+app/models/ability.rb:7:in `initialize'
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.5ms)
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (31.7ms)
+Started GET "/users" for 127.0.0.1 at 2017-12-08 21:32:42 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `role?' for #<User:0xb0487f64>):
+  
+app/models/ability.rb:7:in `initialize'
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.7ms)
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (31.9ms)
+Started GET "/users" for 127.0.0.1 at 2017-12-08 21:32:43 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `role?' for #<User:0xb06356cc>):
+  
+app/models/ability.rb:7:in `initialize'
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.7ms)
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/nm/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (33.5ms)
+Started GET "/users" for 127.0.0.1 at 2017-12-08 21:32:58 +0200
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:UsersController> at /home/nm/trails1-product-reviews/app/controllers/users_controller.rb:3)
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 35ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-08 21:32:58 +0200
+Processing by StaticPagesController#landing_page as HTML
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered static_pages/landing_page.html.erb within layouts/application (10.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 51ms (Views: 45.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-08 21:33:13 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [2 times] (4.0ms)
+  Rendered products/index.html.erb within layouts/application (8.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 56ms (Views: 53.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/static_pages/about" for 127.0.0.1 at 2017-12-08 21:33:14 +0200
+Processing by StaticPagesController#about as HTML
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 63ms (Views: 60.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-12-08 21:33:15 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 14ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-08 21:33:15 +0200
+Processing by StaticPagesController#landing_page as HTML
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered static_pages/landing_page.html.erb within layouts/application (2.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 44ms (Views: 40.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-12-08 21:33:20 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 18ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-08 21:33:20 +0200
+Processing by StaticPagesController#landing_page as HTML
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered static_pages/landing_page.html.erb within layouts/application (3.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 44ms (Views: 41.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-12-08 21:33:20 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 17ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-08 21:33:20 +0200
+Processing by StaticPagesController#landing_page as HTML
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered static_pages/landing_page.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 52ms (Views: 48.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-12-08 21:33:25 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 14ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-08 21:33:25 +0200
+Processing by StaticPagesController#landing_page as HTML
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered static_pages/landing_page.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 47ms (Views: 44.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/static_pages/index" for 127.0.0.1 at 2017-12-08 21:33:26 +0200
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 49ms (Views: 47.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-12-08 21:33:27 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [2 times] (3.4ms)
+  Rendered products/index.html.erb within layouts/application (7.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 67ms (Views: 64.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/static_pages/about" for 127.0.0.1 at 2017-12-08 21:33:28 +0200
+Processing by StaticPagesController#about as HTML
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 59ms (Views: 55.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/static_pages/contact" for 127.0.0.1 at 2017-12-08 21:33:29 +0200
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 44ms (Views: 42.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/static_pages/landing_page" for 127.0.0.1 at 2017-12-08 21:33:30 +0200
+Processing by StaticPagesController#landing_page as HTML
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered static_pages/landing_page.html.erb within layouts/application (5.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 49ms (Views: 46.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-12-08 21:33:30 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 18ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-08 21:33:30 +0200
+Processing by StaticPagesController#landing_page as HTML
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered static_pages/landing_page.html.erb within layouts/application (2.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 51ms (Views: 47.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-12-08 21:33:31 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 19ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-08 21:33:31 +0200
+Processing by StaticPagesController#landing_page as HTML
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered static_pages/landing_page.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 47ms (Views: 44.4ms | ActiveRecord: 0.6ms)
+
+

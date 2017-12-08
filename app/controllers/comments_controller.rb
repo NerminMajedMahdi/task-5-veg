@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
-
+ before_action :set_comment, only: %i[show destroy]
+ before_action :authenticate_user!
 def create
 		@product = Product.find(params[:product_id])
 		@comment = @product.comments.new(comment_params)
@@ -23,12 +24,13 @@ end
 
 
 
-	def destroy
-		@comment = Comment.find(params[:id])
-		product = @comment.product
-		@comment.destroy
-		redirect_to product
-	end
+	
+  def destroy
+    authorize! :destroy, @comment
+    @comment.destroy
+    @product = @comment.product
+    redirect_to @product, notice: 'Comment has been destroyed successfully'
+end
 
 	private
 
