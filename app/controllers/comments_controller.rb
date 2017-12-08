@@ -23,8 +23,6 @@ end
 
 
 
-
-
 	def destroy
 		@comment = Comment.find(params[:id])
 		product = @comment.product
