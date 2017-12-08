@@ -1,6 +1,9 @@
+
 $("#new_comment").html("Thank you for your review!");
+$("#average-rating").attr('data-score', "<%= @product.average_rating %>");
+$('.product-reviews').prepend("<%=j render @comment %>");
+refreshRating();
 
-$("#avg-rating").attr('data-score', "<%= @product.average_rating %>");
 
-$(document).ajaxSuccess(refreshRating());
+
 
