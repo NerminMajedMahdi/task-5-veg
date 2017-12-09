@@ -34663,3 +34663,308 @@ An unauthorized connection attempt was rejected
 Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
 Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:53:56 +0200
 Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:53:56 +0200
+Started GET "/cable" for 127.0.0.1 at 2017-12-09 18:54:13 +0200
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:54:13 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+An unauthorized connection attempt was rejected
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:54:13 +0200
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:54:13 +0200
+Started GET "/cable" for 127.0.0.1 at 2017-12-09 18:54:30 +0200
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:54:30 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+An unauthorized connection attempt was rejected
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:54:30 +0200
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:54:30 +0200
+Started GET "/cable" for 127.0.0.1 at 2017-12-09 18:54:48 +0200
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:54:48 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+An unauthorized connection attempt was rejected
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:54:48 +0200
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:54:48 +0200
+Started GET "/cable" for 127.0.0.1 at 2017-12-09 18:55:05 +0200
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:55:05 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+An unauthorized connection attempt was rejected
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:55:05 +0200
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:55:05 +0200
+Started GET "/cable" for 127.0.0.1 at 2017-12-09 18:55:20 +0200
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:55:20 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+An unauthorized connection attempt was rejected
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:55:20 +0200
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:55:20 +0200
+Started GET "/cable" for 127.0.0.1 at 2017-12-09 18:55:40 +0200
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:55:40 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+An unauthorized connection attempt was rejected
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:55:40 +0200
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:55:40 +0200
+Started GET "/cable" for 127.0.0.1 at 2017-12-09 18:55:58 +0200
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:55:58 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+An unauthorized connection attempt was rejected
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:55:58 +0200
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:55:58 +0200
+Started GET "/cable" for 127.0.0.1 at 2017-12-09 18:56:01 +0200
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:56:01 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+An unauthorized connection attempt was rejected
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:56:01 +0200
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:56:01 +0200
+Started GET "/cable" for 127.0.0.1 at 2017-12-09 18:56:03 +0200
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:56:03 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+An unauthorized connection attempt was rejected
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:56:03 +0200
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:56:03 +0200
+Started GET "/cable" for 127.0.0.1 at 2017-12-09 18:56:08 +0200
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:56:08 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+An unauthorized connection attempt was rejected
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:56:08 +0200
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:56:08 +0200
+Started GET "/products" for 127.0.0.1 at 2017-12-09 18:56:11 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [2 times] (3.3ms)
+  Rendered products/index.html.erb within layouts/application (23.1ms)
+Completed 200 OK in 83ms (Views: 71.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/products/5" for 127.0.0.1 at 2017-12-09 18:56:13 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered shared/_stripe_checkout_button.html.erb (3.3ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 5]]
+  Rendered products/_new_comment.html.erb (0.7ms)
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ? ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["product_id", 5], ["LIMIT", 5], ["OFFSET", 0]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of comments/_comment.html.erb [5 times] (23.3ms)
+  Rendered products/_comments.html.erb (40.8ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 5]]
+  Rendered products/show.html.erb within layouts/application (56.5ms)
+Completed 200 OK in 105ms (Views: 88.6ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/cable" for 127.0.0.1 at 2017-12-09 18:56:16 +0200
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:56:16 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+An unauthorized connection attempt was rejected
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:56:16 +0200
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:56:16 +0200
+Started GET "/cable" for 127.0.0.1 at 2017-12-09 18:56:22 +0200
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:56:22 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+An unauthorized connection attempt was rejected
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:56:22 +0200
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:56:22 +0200
+Started GET "/cable" for 127.0.0.1 at 2017-12-09 18:56:34 +0200
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:56:34 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+An unauthorized connection attempt was rejected
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:56:34 +0200
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:56:34 +0200
+Started GET "/cable" for 127.0.0.1 at 2017-12-09 18:56:53 +0200
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:56:53 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+An unauthorized connection attempt was rejected
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:56:53 +0200
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:56:53 +0200
+Started GET "/cable" for 127.0.0.1 at 2017-12-09 18:57:12 +0200
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:57:12 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+An unauthorized connection attempt was rejected
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:57:12 +0200
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:57:12 +0200
+Started GET "/cable" for 127.0.0.1 at 2017-12-09 18:57:14 +0200
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:57:14 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+An unauthorized connection attempt was rejected
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:57:14 +0200
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:57:14 +0200
+Started GET "/cable" for 127.0.0.1 at 2017-12-09 18:57:31 +0200
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:57:31 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+An unauthorized connection attempt was rejected
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:57:31 +0200
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:57:31 +0200
+Started GET "/cable" for 127.0.0.1 at 2017-12-09 18:57:49 +0200
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:57:49 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+An unauthorized connection attempt was rejected
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:57:49 +0200
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:57:49 +0200
+Started GET "/cable" for 127.0.0.1 at 2017-12-09 18:58:04 +0200
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:58:04 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+An unauthorized connection attempt was rejected
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:58:04 +0200
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:58:04 +0200
+Started GET "/products" for 127.0.0.1 at 2017-12-09 18:58:07 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [2 times] (3.3ms)
+  Rendered products/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 69ms (Views: 67.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cable" for 127.0.0.1 at 2017-12-09 18:58:28 +0200
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:58:28 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+An unauthorized connection attempt was rejected
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:58:28 +0200
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:58:28 +0200
+Started GET "/cable" for 127.0.0.1 at 2017-12-09 18:58:40 +0200
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:58:40 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+An unauthorized connection attempt was rejected
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:58:40 +0200
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:58:40 +0200
+Started GET "/cable" for 127.0.0.1 at 2017-12-09 18:58:44 +0200
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:58:44 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+An unauthorized connection attempt was rejected
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:58:44 +0200
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:58:44 +0200
+Started GET "/cable" for 127.0.0.1 at 2017-12-09 18:58:46 +0200
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:58:47 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+An unauthorized connection attempt was rejected
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:58:47 +0200
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:58:47 +0200
+Started GET "/cable" for 127.0.0.1 at 2017-12-09 18:58:55 +0200
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:58:55 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+An unauthorized connection attempt was rejected
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:58:55 +0200
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:58:55 +0200
+Started GET "/cable" for 127.0.0.1 at 2017-12-09 18:59:02 +0200
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:59:02 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+An unauthorized connection attempt was rejected
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:59:02 +0200
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:59:02 +0200
+Started GET "/cable" for 127.0.0.1 at 2017-12-09 18:59:05 +0200
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:59:05 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+An unauthorized connection attempt was rejected
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:59:05 +0200
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:59:05 +0200
+Started GET "/cable" for 127.0.0.1 at 2017-12-09 18:59:08 +0200
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:59:08 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+An unauthorized connection attempt was rejected
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:59:08 +0200
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:59:08 +0200
+Started GET "/cable" for 127.0.0.1 at 2017-12-09 18:59:10 +0200
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:59:10 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+An unauthorized connection attempt was rejected
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:59:10 +0200
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:59:10 +0200
+Started GET "/cable" for 127.0.0.1 at 2017-12-09 18:59:11 +0200
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:59:11 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+An unauthorized connection attempt was rejected
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:59:11 +0200
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:59:11 +0200
+Started GET "/cable" for 127.0.0.1 at 2017-12-09 18:59:19 +0200
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:59:19 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+An unauthorized connection attempt was rejected
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:59:19 +0200
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:59:19 +0200
+Started GET "/cable" for 127.0.0.1 at 2017-12-09 18:59:25 +0200
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:59:25 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+An unauthorized connection attempt was rejected
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:59:25 +0200
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:59:25 +0200
+Started GET "/cable" for 127.0.0.1 at 2017-12-09 18:59:45 +0200
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:59:45 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+An unauthorized connection attempt was rejected
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:59:45 +0200
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 18:59:45 +0200
+Started GET "/cable" for 127.0.0.1 at 2017-12-09 19:00:05 +0200
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 19:00:05 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+An unauthorized connection attempt was rejected
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 19:00:05 +0200
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 19:00:05 +0200
+Started GET "/cable" for 127.0.0.1 at 2017-12-09 19:00:25 +0200
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 19:00:25 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+An unauthorized connection attempt was rejected
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 19:00:25 +0200
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 19:00:25 +0200
+Started GET "/cable" for 127.0.0.1 at 2017-12-09 19:00:45 +0200
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 19:00:45 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+An unauthorized connection attempt was rejected
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 19:00:45 +0200
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 19:00:45 +0200
+Started GET "/cable" for 127.0.0.1 at 2017-12-09 19:01:05 +0200
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 19:01:05 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+An unauthorized connection attempt was rejected
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 19:01:05 +0200
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 19:01:05 +0200
+Started GET "/cable" for 127.0.0.1 at 2017-12-09 19:01:25 +0200
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 19:01:25 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+An unauthorized connection attempt was rejected
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 19:01:25 +0200
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 19:01:25 +0200
+Started GET "/cable" for 127.0.0.1 at 2017-12-09 19:01:45 +0200
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 19:01:45 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+An unauthorized connection attempt was rejected
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 19:01:45 +0200
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-09 19:01:45 +0200
