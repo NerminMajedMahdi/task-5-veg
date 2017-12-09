@@ -21,6 +21,7 @@ Rails.application.routes.draw do
 post 'payments/create'
 get 'payments/create'
 
+
 mount ActionCable.server => '/cable'
 
 
