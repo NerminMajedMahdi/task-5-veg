@@ -31,7 +31,7 @@ end
 module MYApp
   class Application < Rails::Application
    # config.assets.paths << Rails.root.join('node_modules')
-config.assets.initialize_on_precompile = false
+config.assets.initialize_on_precompile = true
 config.assets.precompile = []
 
 
