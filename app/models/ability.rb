@@ -6,10 +6,13 @@ class Ability
     if user.admin?
       can :manage, all
     else
-     can %i[show update], User, id: user.id
+   can %i[show update], User, id: user.id
       can %i[show index], Order, user_id: user.id
-      can :create, Comment, user_id: user.id
-      can :show, Comment
+can :manage, Comment, user_id: user.id
+ can :read, Comment
+can :read, Product
+can :manage, User, id: user.id
+
     end
   end
 end
