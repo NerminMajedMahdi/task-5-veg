@@ -1,5 +1,5 @@
 class ProductChannel < ApplicationCable::Channel
- def subscribed
+  def subscribed
     #stream_from "product_channel"
   end
 
@@ -12,8 +12,6 @@ class ProductChannel < ApplicationCable::Channel
     stream_for data["product_id"]
   end
 end
-
-
 
 
 

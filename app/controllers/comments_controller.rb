@@ -1,5 +1,7 @@
 class CommentsController < ApplicationController
-
+ before_action :set_user, only: [:destroy]
+  before_action :authenticate_user!
+  load_and_authorize_resource
 def create
 		@product = Product.find(params[:product_id])
 		@comment = @product.comments.new(comment_params)
@@ -8,8 +10,9 @@ def create
 
 		respond_to do |format|
       if @comment.save
-     # ActionCable.server.broadcast 'product_channel', comment: @comment, average_rating: @comment.product.average_rating
-       #ProductChannel.broadcast_to @product.id, comment: CommentsController.render(partial: 'comments/comment', locals: {comment: @comment, current_user: current_user}), average_rating: @product.average_rating
+    ActionCable.server.broadcast 'product_channel', comment: @comment, average_rating: @comment.product.average_rating
+     ProductChannel.broadcast_to @product.id, comment: CommentsController.render(partial: 'comments/comment', locals: {comment: @comment, current_user: current_user}), average_rating: @product.average_rating
+
         format.html { redirect_to @product, notice: 'Review was created successfully.' }
         format.json { render :show, status: :created, location: @product }
         format.js
@@ -24,9 +27,11 @@ end
 
 	
   def destroy
+
     authorize! :destroy, @comment
     @comment.destroy
     @product = @comment.product
+
     redirect_to @product, notice: 'Comment has been destroyed successfully'
 end
 
@@ -36,6 +41,8 @@ end
 		  params.require(:comment).permit(:user_id, :body, :rating)		
 	  end
 
-
+ def set_user
+      @user = current_user
+    end
 
 end
