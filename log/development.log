@@ -42011,3 +42011,1024 @@ Completed 200 OK in 48ms (Views: 46.4ms | ActiveRecord: 0.2ms)
 ProductChannel#listen
 ProductChannel stopped streaming from product:
 ProductChannel is streaming from product:
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-11 13:34:49 +0200
+ProductChannel stopped streaming from product:
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-11 13:36:16 +0200
+ProductChannel stopped streaming from product:7
+Started GET "/products" for 127.0.0.1 at 2017-12-11 14:04:36 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [2 times] (2.2ms)
+  Rendered products/index.html.erb within layouts/application (14.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 155ms (Views: 146.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/cable" for 127.0.0.1 at 2017-12-11 14:04:37 +0200
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-11 14:04:37 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+ProductChannel is transmitting the subscription confirmation
+ProductChannel#listen
+ProductChannel is streaming from product:
+Started GET "/products/7" for 127.0.0.1 at 2017-12-11 14:04:39 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered shared/_stripe_checkout_button.html.erb (1.2ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 7]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered products/_new_comment.html.erb (9.9ms)
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ? ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["product_id", 7], ["LIMIT", 5], ["OFFSET", 0]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of comments/_comment.html.erb [5 times] (8.0ms)
+  Rendered products/_comments.html.erb (11.0ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 7]]
+  Rendered products/show.html.erb within layouts/application (37.3ms)
+Completed 200 OK in 89ms (Views: 72.9ms | ActiveRecord: 2.6ms)
+
+
+ProductChannel#listen({"product_id"=>7})
+ProductChannel stopped streaming from product:
+ProductChannel is streaming from product:7
+Started POST "/products/7/comments" for 127.0.0.1 at 2017-12-11 14:04:53 +0200
+Processing by CommentsController#create as JS
+  Parameters: {"utf8"=>"✓", "comment"=>{"body"=>"nerminoooooooo :)", "rating"=>"4"}, "commit"=>"Submit", "product_id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "body", "rating", "product_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["body", "nerminoooooooo :)"], ["rating", 4], ["product_id", 7], ["created_at", "2017-12-11 12:04:53.959582"], ["updated_at", "2017-12-11 12:04:53.959582"]]
+  [1m[35m (103.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ?[0m  [["id", 156], ["LIMIT", 1]]
+[ActiveJob] Enqueued CommentUpdateJob (Job ID: 0d9fc08f-41ca-46fa-91f1-3808e47d3c4f) to Async(default) with arguments: #<GlobalID:0xb2704f74 @uri=#<URI::GID gid://my-app/Comment/156>>, #<GlobalID:0xb2704b64 @uri=#<URI::GID gid://my-app/User/1>>
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [CommentUpdateJob] [0d9fc08f-41ca-46fa-91f1-3808e47d3c4f] Performing CommentUpdateJob from Async(default) with arguments: #<GlobalID:0xb48eb0c0 @uri=#<URI::GID gid://my-app/Comment/156>>, #<GlobalID:0xb48eab70 @uri=#<URI::GID gid://my-app/User/1>>
+  Rendering comments/create.js.erb
+[ActiveJob] [CommentUpdateJob] [0d9fc08f-41ca-46fa-91f1-3808e47d3c4f]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered comments/_comment.html.erb (1.8ms)
+[ActiveJob] [CommentUpdateJob] [0d9fc08f-41ca-46fa-91f1-3808e47d3c4f]   Rendered comments/_comment.html.erb (8.0ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 7]]
+[ActiveJob] [CommentUpdateJob] [0d9fc08f-41ca-46fa-91f1-3808e47d3c4f]   [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered comments/create.js.erb (7.8ms)
+[ActiveJob] [CommentUpdateJob] [0d9fc08f-41ca-46fa-91f1-3808e47d3c4f]   [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 7]]
+Completed 200 OK in 160ms (Views: 27.3ms | ActiveRecord: 104.1ms)
+
+
+[ActiveJob] [CommentUpdateJob] [0d9fc08f-41ca-46fa-91f1-3808e47d3c4f] [ActionCable] Broadcasting to product:7: {:comment=>"<div class=\"row\">\n  <div class= \"col-md-12 col-md-offset-0 col-sm-8 col-sm-offset-2\">\n    <hr>\n    <p>\n      <strong>Nermin</strong> <small><em>less than a minute ago</em></small>\n    </p>\n    <p>Rating: 4/5</p>\n    <div class=\"rated\" data-score=\"4\"></div>\n    <p>nerminoooooooo :)</p>\n  </div> <!-- end col -->\n</div> <!-- end row -->\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", :average_rating=>3.12121212121212}
+[ActiveJob] [CommentUpdateJob] [0d9fc08f-41ca-46fa-91f1-3808e47d3c4f] Performed CommentUpdateJob from Async(default) in 21.63ms
+ProductChannel transmitting {"comment"=>"<div class=\"row\">\n  <div class= \"col-md-12 col-md-offset-0 col-sm-8 col-sm-offset-2\">\n    <hr>\n    <p>\n      <strong>Nermin</strong> <small><em>less than a minute ago</em></small>\n    </p>\n    <p>Rating: 4/5</p>\n    <div class=\"rated\" data-score=\"4\"></div>\n    <p>nerm... (via streamed from product:7)
+Started GET "/products" for 127.0.0.1 at 2017-12-11 14:05:33 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [2 times] (3.7ms)
+  Rendered products/index.html.erb within layouts/application (7.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 54ms (Views: 52.3ms | ActiveRecord: 0.6ms)
+
+
+ProductChannel#listen
+ProductChannel stopped streaming from product:7
+ProductChannel is streaming from product:
+Started GET "/products/8" for 127.0.0.1 at 2017-12-11 14:05:34 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered shared/_stripe_checkout_button.html.erb (0.6ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 8]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered products/_new_comment.html.erb (2.7ms)
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ? ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["product_id", 8], ["LIMIT", 5], ["OFFSET", 0]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered collection of comments/_comment.html.erb [5 times] (7.5ms)
+  Rendered products/_comments.html.erb (9.7ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 8]]
+  Rendered products/show.html.erb within layouts/application (26.2ms)
+Completed 200 OK in 68ms (Views: 61.8ms | ActiveRecord: 1.5ms)
+
+
+ProductChannel#listen({"product_id"=>8})
+ProductChannel stopped streaming from product:
+ProductChannel is streaming from product:8
+Started POST "/products/8/comments" for 127.0.0.1 at 2017-12-11 14:05:43 +0200
+Processing by CommentsController#create as JS
+  Parameters: {"utf8"=>"✓", "comment"=>{"body"=>";;;;;;;;;;;;;;;kjkxckszxvxc", "rating"=>"4"}, "commit"=>"Submit", "product_id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "body", "rating", "product_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["body", ";;;;;;;;;;;;;;;kjkxckszxvxc"], ["rating", 4], ["product_id", 8], ["created_at", "2017-12-11 12:05:43.641010"], ["updated_at", "2017-12-11 12:05:43.641010"]]
+  [1m[35m (96.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ?[0m  [["id", 157], ["LIMIT", 1]]
+[ActiveJob] Enqueued CommentUpdateJob (Job ID: aa74e316-eb1b-485a-9d7b-4f60dffccb8c) to Async(default) with arguments: #<GlobalID:0xb3c2def0 @uri=#<URI::GID gid://my-app/Comment/157>>, #<GlobalID:0xb3c2d4c8 @uri=#<URI::GID gid://my-app/User/1>>
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [CommentUpdateJob] [aa74e316-eb1b-485a-9d7b-4f60dffccb8c] Performing CommentUpdateJob from Async(default) with arguments: #<GlobalID:0xb3f19b3c @uri=#<URI::GID gid://my-app/Comment/157>>, #<GlobalID:0xb3f18f20 @uri=#<URI::GID gid://my-app/User/1>>
+  Rendering comments/create.js.erb
+[ActiveJob] [CommentUpdateJob] [aa74e316-eb1b-485a-9d7b-4f60dffccb8c]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered comments/_comment.html.erb (1.4ms)
+[ActiveJob] [CommentUpdateJob] [aa74e316-eb1b-485a-9d7b-4f60dffccb8c]   Rendered comments/_comment.html.erb (6.1ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 8]]
+[ActiveJob] [CommentUpdateJob] [aa74e316-eb1b-485a-9d7b-4f60dffccb8c]   [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered comments/create.js.erb (8.2ms)
+[ActiveJob] [CommentUpdateJob] [aa74e316-eb1b-485a-9d7b-4f60dffccb8c]   [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 8]]
+Completed 200 OK in 147ms (Views: 19.2ms | ActiveRecord: 97.4ms)
+
+
+[ActiveJob] [CommentUpdateJob] [aa74e316-eb1b-485a-9d7b-4f60dffccb8c] [ActionCable] Broadcasting to product:8: {:comment=>"<div class=\"row\">\n  <div class= \"col-md-12 col-md-offset-0 col-sm-8 col-sm-offset-2\">\n    <hr>\n    <p>\n      <strong>Nermin</strong> <small><em>less than a minute ago</em></small>\n    </p>\n    <p>Rating: 4/5</p>\n    <div class=\"rated\" data-score=\"4\"></div>\n    <p>;;;;;;;;;;;;;;;kjkxckszxvxc</p>\n  </div> <!-- end col -->\n</div> <!-- end row -->\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", :average_rating=>3.0}
+[ActiveJob] [CommentUpdateJob] [aa74e316-eb1b-485a-9d7b-4f60dffccb8c] Performed CommentUpdateJob from Async(default) in 27.0ms
+ProductChannel transmitting {"comment"=>"<div class=\"row\">\n  <div class= \"col-md-12 col-md-offset-0 col-sm-8 col-sm-offset-2\">\n    <hr>\n    <p>\n      <strong>Nermin</strong> <small><em>less than a minute ago</em></small>\n    </p>\n    <p>Rating: 4/5</p>\n    <div class=\"rated\" data-score=\"4\"></div>\n    <p>;;;;... (via streamed from product:8)
+Started GET "/products" for 127.0.0.1 at 2017-12-11 14:05:59 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [2 times] (5.2ms)
+  Rendered products/index.html.erb within layouts/application (8.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 73ms (Views: 70.0ms | ActiveRecord: 0.5ms)
+
+
+ProductChannel#listen
+ProductChannel stopped streaming from product:8
+ProductChannel is streaming from product:
+Started GET "/products/7" for 127.0.0.1 at 2017-12-11 14:06:01 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered shared/_stripe_checkout_button.html.erb (0.8ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 7]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered products/_new_comment.html.erb (2.3ms)
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ? ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["product_id", 7], ["LIMIT", 5], ["OFFSET", 0]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of comments/_comment.html.erb [5 times] (13.3ms)
+  Rendered products/_comments.html.erb (16.9ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 7]]
+  Rendered products/show.html.erb within layouts/application (33.3ms)
+Completed 200 OK in 84ms (Views: 78.9ms | ActiveRecord: 2.3ms)
+
+
+ProductChannel#listen({"product_id"=>7})
+ProductChannel stopped streaming from product:
+ProductChannel is streaming from product:7
+Started GET "/" for 127.0.0.1 at 2017-12-11 14:06:24 +0200
+Processing by StaticPagesController#landing_page as HTML
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered static_pages/landing_page.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 43ms (Views: 41.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cable" for 127.0.0.1 at 2017-12-11 14:06:25 +0200
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-11 14:06:25 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+ProductChannel is transmitting the subscription confirmation
+ProductChannel#listen
+ProductChannel#listen
+ProductChannel is streaming from product:
+ProductChannel stopped streaming from product:
+ProductChannel is streaming from product:
+Started GET "/products" for 127.0.0.1 at 2017-12-11 14:06:31 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [2 times] (3.2ms)
+  Rendered products/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 53ms (Views: 50.6ms | ActiveRecord: 0.8ms)
+
+
+ProductChannel#listen
+ProductChannel stopped streaming from product:
+ProductChannel is streaming from product:
+Started GET "/login" for 127.0.0.1 at 2017-12-11 14:06:33 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 57ms (Views: 54.8ms | ActiveRecord: 0.0ms)
+
+
+ProductChannel#listen
+ProductChannel stopped streaming from product:
+ProductChannel is streaming from product:
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-11 14:06:37 +0200
+ProductChannel stopped streaming from product:
+Started POST "/login" for 127.0.0.1 at 2017-12-11 14:06:37 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xigwj0uD2G7/KHOld7GtqZI6Yl6HxnDEcD4YniVK1f1/5eEIy+iJqCJdDHYl3GmIcBmq4SQUxeNH1U3tPsi7rw==", "user"=>{"email"=>"123455@hotmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "123455@hotmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2017-12-11 12:06:37.786146"], ["last_sign_in_at", "2017-12-11 11:27:38.237063"], ["sign_in_count", 29], ["updated_at", "2017-12-11 12:06:37.788087"], ["id", 1]]
+  [1m[35m (81.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 296ms (ActiveRecord: 81.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-11 14:06:37 +0200
+Processing by StaticPagesController#landing_page as HTML
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered static_pages/landing_page.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 41ms (Views: 38.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/cable" for 127.0.0.1 at 2017-12-11 14:06:38 +0200
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-11 14:06:38 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+ProductChannel is transmitting the subscription confirmation
+ProductChannel#listen
+ProductChannel is streaming from product:
+ProductChannel#listen
+ProductChannel stopped streaming from product:
+ProductChannel is streaming from product:
+Started GET "/products" for 127.0.0.1 at 2017-12-11 14:06:40 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [2 times] (2.5ms)
+  Rendered products/index.html.erb within layouts/application (7.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 51ms (Views: 48.8ms | ActiveRecord: 0.6ms)
+
+
+ProductChannel#listen
+ProductChannel stopped streaming from product:
+ProductChannel is streaming from product:
+Started GET "/products/7" for 127.0.0.1 at 2017-12-11 14:06:44 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered shared/_stripe_checkout_button.html.erb (1.0ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 7]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered products/_new_comment.html.erb (2.5ms)
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ? ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["product_id", 7], ["LIMIT", 5], ["OFFSET", 0]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of comments/_comment.html.erb [5 times] (8.2ms)
+  Rendered products/_comments.html.erb (10.4ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 7]]
+  Rendered products/show.html.erb within layouts/application (27.9ms)
+Completed 200 OK in 70ms (Views: 64.4ms | ActiveRecord: 2.6ms)
+
+
+ProductChannel#listen({"product_id"=>7})
+ProductChannel stopped streaming from product:
+ProductChannel is streaming from product:7
+Started POST "/products/7/comments" for 127.0.0.1 at 2017-12-11 14:06:54 +0200
+Processing by CommentsController#create as JS
+  Parameters: {"utf8"=>"✓", "comment"=>{"body"=>"mmmmmmmfdfdsfasfdgdfgfdg", "rating"=>""}, "commit"=>"Submit", "product_id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Redirected to http://localhost:3000/products/7
+Completed 200 OK in 16ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/products/7" for 127.0.0.1 at 2017-12-11 14:06:54 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered shared/_stripe_checkout_button.html.erb (0.6ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 7]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered products/_new_comment.html.erb (2.2ms)
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ? ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["product_id", 7], ["LIMIT", 5], ["OFFSET", 0]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of comments/_comment.html.erb [5 times] (7.0ms)
+  Rendered products/_comments.html.erb (9.2ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 7]]
+  Rendered products/show.html.erb within layouts/application (23.7ms)
+Completed 200 OK in 70ms (Views: 64.8ms | ActiveRecord: 1.9ms)
+
+
+ProductChannel#listen({"product_id"=>7})
+ProductChannel stopped streaming from product:7
+ProductChannel is streaming from product:7
+Started GET "/products" for 127.0.0.1 at 2017-12-11 14:07:10 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [2 times] (3.8ms)
+  Rendered products/index.html.erb within layouts/application (7.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 75ms (Views: 72.7ms | ActiveRecord: 0.6ms)
+
+
+ProductChannel#listen
+ProductChannel stopped streaming from product:7
+ProductChannel is streaming from product:
+Started GET "/products/8" for 127.0.0.1 at 2017-12-11 14:07:11 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered shared/_stripe_checkout_button.html.erb (1.3ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 8]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered products/_new_comment.html.erb (2.6ms)
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ? ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["product_id", 8], ["LIMIT", 5], ["OFFSET", 0]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered collection of comments/_comment.html.erb [5 times] (12.2ms)
+  Rendered products/_comments.html.erb (15.8ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 8]]
+  Rendered products/show.html.erb within layouts/application (34.0ms)
+Completed 200 OK in 86ms (Views: 79.9ms | ActiveRecord: 2.4ms)
+
+
+ProductChannel#listen({"product_id"=>8})
+ProductChannel stopped streaming from product:
+ProductChannel is streaming from product:8
+Started POST "/products/8/comments" for 127.0.0.1 at 2017-12-11 14:07:19 +0200
+Processing by CommentsController#create as JS
+  Parameters: {"utf8"=>"✓", "comment"=>{"body"=>"sdfdgsf", "rating"=>"4"}, "commit"=>"Submit", "product_id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "body", "rating", "product_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["body", "sdfdgsf"], ["rating", 4], ["product_id", 8], ["created_at", "2017-12-11 12:07:19.294615"], ["updated_at", "2017-12-11 12:07:19.294615"]]
+  [1m[35m (118.0ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] Enqueued CommentUpdateJob (Job ID: e4080f4b-9750-4f7c-926f-aba022b83766) to Async(default) with arguments: #<GlobalID:0xb59ddaf4 @uri=#<URI::GID gid://my-app/Comment/158>>, #<GlobalID:0xb59dd4f0 @uri=#<URI::GID gid://my-app/User/1>>
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ?[0m  [["id", 158], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [CommentUpdateJob] [e4080f4b-9750-4f7c-926f-aba022b83766] Performing CommentUpdateJob from Async(default) with arguments: #<GlobalID:0xb59c1264 @uri=#<URI::GID gid://my-app/Comment/158>>, #<GlobalID:0xb59c0e18 @uri=#<URI::GID gid://my-app/User/1>>
+  Rendering comments/create.js.erb
+[ActiveJob] [CommentUpdateJob] [e4080f4b-9750-4f7c-926f-aba022b83766]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered comments/_comment.html.erb (2.4ms)
+[ActiveJob] [CommentUpdateJob] [e4080f4b-9750-4f7c-926f-aba022b83766]   Rendered comments/_comment.html.erb (8.1ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 8]]
+[ActiveJob] [CommentUpdateJob] [e4080f4b-9750-4f7c-926f-aba022b83766]   [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered comments/create.js.erb (11.0ms)
+[ActiveJob] [CommentUpdateJob] [e4080f4b-9750-4f7c-926f-aba022b83766]   [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 8]]
+Completed 200 OK in 171ms (Views: 29.9ms | ActiveRecord: 119.3ms)
+
+
+[ActiveJob] [CommentUpdateJob] [e4080f4b-9750-4f7c-926f-aba022b83766] [ActionCable] Broadcasting to product:8: {:comment=>"<div class=\"row\">\n  <div class= \"col-md-12 col-md-offset-0 col-sm-8 col-sm-offset-2\">\n    <hr>\n    <p>\n      <strong>Nermin</strong> <small><em>less than a minute ago</em></small>\n    </p>\n    <p>Rating: 4/5</p>\n    <div class=\"rated\" data-score=\"4\"></div>\n    <p>sdfdgsf</p>\n  </div> <!-- end col -->\n</div> <!-- end row -->\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", :average_rating=>3.1}
+[ActiveJob] [CommentUpdateJob] [e4080f4b-9750-4f7c-926f-aba022b83766] Performed CommentUpdateJob from Async(default) in 24.15ms
+ProductChannel transmitting {"comment"=>"<div class=\"row\">\n  <div class= \"col-md-12 col-md-offset-0 col-sm-8 col-sm-offset-2\">\n    <hr>\n    <p>\n      <strong>Nermin</strong> <small><em>less than a minute ago</em></small>\n    </p>\n    <p>Rating: 4/5</p>\n    <div class=\"rated\" data-score=\"4\"></div>\n    <p>sdfd... (via streamed from product:8)
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-11 14:07:25 +0200
+ProductChannel stopped streaming from product:7
+Started GET "/products/7" for 127.0.0.1 at 2017-12-11 14:07:25 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered shared/_stripe_checkout_button.html.erb (0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 7]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered products/_new_comment.html.erb (1.9ms)
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ? ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["product_id", 7], ["LIMIT", 5], ["OFFSET", 0]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of comments/_comment.html.erb [5 times] (7.1ms)
+  Rendered products/_comments.html.erb (9.5ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 7]]
+  Rendered products/show.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 62ms (Views: 56.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/cable" for 127.0.0.1 at 2017-12-11 14:07:26 +0200
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-11 14:07:26 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+ProductChannel is transmitting the subscription confirmation
+ProductChannel#listen
+ProductChannel is streaming from product:
+ProductChannel#listen({"product_id"=>7})
+ProductChannel stopped streaming from product:
+ProductChannel is streaming from product:7
+Started POST "/products/7/comments" for 127.0.0.1 at 2017-12-11 14:07:35 +0200
+Processing by CommentsController#create as JS
+  Parameters: {"utf8"=>"✓", "comment"=>{"body"=>"dsfasdgds", "rating"=>"4"}, "commit"=>"Submit", "product_id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "body", "rating", "product_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["body", "dsfasdgds"], ["rating", 4], ["product_id", 7], ["created_at", "2017-12-11 12:07:35.287188"], ["updated_at", "2017-12-11 12:07:35.287188"]]
+  [1m[35m (103.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ?[0m  [["id", 159], ["LIMIT", 1]]
+[ActiveJob] Enqueued CommentUpdateJob (Job ID: 33f3169e-2ecf-4877-bf35-5537148ec7a3) to Async(default) with arguments: #<GlobalID:0xb1d94174 @uri=#<URI::GID gid://my-app/Comment/159>>, #<GlobalID:0xb1d96e9c @uri=#<URI::GID gid://my-app/User/1>>
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering comments/create.js.erb
+[ActiveJob] [CommentUpdateJob] [33f3169e-2ecf-4877-bf35-5537148ec7a3] Performing CommentUpdateJob from Async(default) with arguments: #<GlobalID:0xb1d680b0 @uri=#<URI::GID gid://my-app/Comment/159>>, #<GlobalID:0xb1d5bc20 @uri=#<URI::GID gid://my-app/User/1>>
+[ActiveJob] [CommentUpdateJob] [33f3169e-2ecf-4877-bf35-5537148ec7a3]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered comments/_comment.html.erb (1.1ms)
+[ActiveJob] [CommentUpdateJob] [33f3169e-2ecf-4877-bf35-5537148ec7a3]   Rendered comments/_comment.html.erb (4.5ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 7]]
+[ActiveJob] [CommentUpdateJob] [33f3169e-2ecf-4877-bf35-5537148ec7a3]   [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered comments/create.js.erb (15.2ms)
+[ActiveJob] [CommentUpdateJob] [33f3169e-2ecf-4877-bf35-5537148ec7a3]   [1m[35m (0.5ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 7]]
+Completed 200 OK in 150ms (Views: 22.5ms | ActiveRecord: 104.2ms)
+
+
+[ActiveJob] [CommentUpdateJob] [33f3169e-2ecf-4877-bf35-5537148ec7a3] [ActionCable] Broadcasting to product:7: {:comment=>"<div class=\"row\">\n  <div class= \"col-md-12 col-md-offset-0 col-sm-8 col-sm-offset-2\">\n    <hr>\n    <p>\n      <strong>Nermin</strong> <small><em>less than a minute ago</em></small>\n    </p>\n    <p>Rating: 4/5</p>\n    <div class=\"rated\" data-score=\"4\"></div>\n    <p>dsfasdgds</p>\n  </div> <!-- end col -->\n</div> <!-- end row -->\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", :average_rating=>3.14705882352941}
+[ActiveJob] [CommentUpdateJob] [33f3169e-2ecf-4877-bf35-5537148ec7a3] Performed CommentUpdateJob from Async(default) in 19.3ms
+ProductChannel transmitting {"comment"=>"<div class=\"row\">\n  <div class= \"col-md-12 col-md-offset-0 col-sm-8 col-sm-offset-2\">\n    <hr>\n    <p>\n      <strong>Nermin</strong> <small><em>less than a minute ago</em></small>\n    </p>\n    <p>Rating: 4/5</p>\n    <div class=\"rated\" data-score=\"4\"></div>\n    <p>dsfa... (via streamed from product:7)
+Started GET "/products" for 127.0.0.1 at 2017-12-11 14:07:46 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [2 times] (3.3ms)
+  Rendered products/index.html.erb within layouts/application (6.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 73ms (Views: 70.3ms | ActiveRecord: 0.6ms)
+
+
+ProductChannel#listen
+ProductChannel stopped streaming from product:8
+ProductChannel is streaming from product:
+Started GET "/products/8" for 127.0.0.1 at 2017-12-11 14:07:47 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered shared/_stripe_checkout_button.html.erb (0.9ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 8]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered products/_new_comment.html.erb (2.7ms)
+  [1m[36mComment Load (1.4ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ? ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["product_id", 8], ["LIMIT", 5], ["OFFSET", 0]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered collection of comments/_comment.html.erb [5 times] (12.5ms)
+  Rendered products/_comments.html.erb (17.2ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 8]]
+  Rendered products/show.html.erb within layouts/application (33.6ms)
+Completed 200 OK in 103ms (Views: 95.6ms | ActiveRecord: 3.2ms)
+
+
+ProductChannel#listen({"product_id"=>8})
+ProductChannel stopped streaming from product:
+ProductChannel is streaming from product:8
+Started GET "/products" for 127.0.0.1 at 2017-12-11 14:07:57 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [2 times] (3.3ms)
+  Rendered products/index.html.erb within layouts/application (8.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 53ms (Views: 51.1ms | ActiveRecord: 0.5ms)
+
+
+ProductChannel#listen
+ProductChannel stopped streaming from product:7
+ProductChannel is streaming from product:
+Started GET "/products" for 127.0.0.1 at 2017-12-11 14:07:59 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [2 times] (2.8ms)
+  Rendered products/index.html.erb within layouts/application (6.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 47ms (Views: 45.1ms | ActiveRecord: 0.6ms)
+
+
+ProductChannel#listen
+ProductChannel stopped streaming from product:
+ProductChannel is streaming from product:
+Started GET "/products/7" for 127.0.0.1 at 2017-12-11 14:08:00 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered shared/_stripe_checkout_button.html.erb (1.0ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 7]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered products/_new_comment.html.erb (5.3ms)
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ? ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["product_id", 7], ["LIMIT", 5], ["OFFSET", 0]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered collection of comments/_comment.html.erb [5 times] (9.2ms)
+  Rendered products/_comments.html.erb (12.2ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 7]]
+  Rendered products/show.html.erb within layouts/application (32.3ms)
+Completed 200 OK in 90ms (Views: 84.3ms | ActiveRecord: 2.2ms)
+
+
+ProductChannel#listen({"product_id"=>7})
+ProductChannel stopped streaming from product:
+ProductChannel is streaming from product:7
+Started POST "/products/7/comments" for 127.0.0.1 at 2017-12-11 14:08:11 +0200
+Processing by CommentsController#create as JS
+  Parameters: {"utf8"=>"✓", "comment"=>{"body"=>"fdfgWAEWQEQWE2EWQ", "rating"=>"4"}, "commit"=>"Submit", "product_id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "body", "rating", "product_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["body", "fdfgWAEWQEQWE2EWQ"], ["rating", 4], ["product_id", 7], ["created_at", "2017-12-11 12:08:11.660146"], ["updated_at", "2017-12-11 12:08:11.660146"]]
+  [1m[35m (123.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ?[0m  [["id", 160], ["LIMIT", 1]]
+[ActiveJob] Enqueued CommentUpdateJob (Job ID: 9e8fb910-bd85-4e43-add7-4c1a3fc39e94) to Async(default) with arguments: #<GlobalID:0xb22a4e0c @uri=#<URI::GID gid://my-app/Comment/160>>, #<GlobalID:0xb22a4998 @uri=#<URI::GID gid://my-app/User/1>>
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering comments/create.js.erb
+[ActiveJob] [CommentUpdateJob] [9e8fb910-bd85-4e43-add7-4c1a3fc39e94] Performing CommentUpdateJob from Async(default) with arguments: #<GlobalID:0xb227c5b0 @uri=#<URI::GID gid://my-app/Comment/160>>, #<GlobalID:0xb227c114 @uri=#<URI::GID gid://my-app/User/1>>
+  Rendered comments/_comment.html.erb (1.6ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 7]]
+[ActiveJob] [CommentUpdateJob] [9e8fb910-bd85-4e43-add7-4c1a3fc39e94]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered comments/create.js.erb (14.9ms)
+[ActiveJob] [CommentUpdateJob] [9e8fb910-bd85-4e43-add7-4c1a3fc39e94]   Rendered comments/_comment.html.erb (3.7ms)
+Completed 200 OK in 164ms (Views: 19.5ms | ActiveRecord: 124.6ms)
+
+
+[ActiveJob] [CommentUpdateJob] [9e8fb910-bd85-4e43-add7-4c1a3fc39e94]   [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[ActiveJob] [CommentUpdateJob] [9e8fb910-bd85-4e43-add7-4c1a3fc39e94]   [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 7]]
+[ActiveJob] [CommentUpdateJob] [9e8fb910-bd85-4e43-add7-4c1a3fc39e94] [ActionCable] Broadcasting to product:7: {:comment=>"<div class=\"row\">\n  <div class= \"col-md-12 col-md-offset-0 col-sm-8 col-sm-offset-2\">\n    <hr>\n    <p>\n      <strong>Nermin</strong> <small><em>less than a minute ago</em></small>\n    </p>\n    <p>Rating: 4/5</p>\n    <div class=\"rated\" data-score=\"4\"></div>\n    <p>fdfgWAEWQEQWE2EWQ</p>\n  </div> <!-- end col -->\n</div> <!-- end row -->\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", :average_rating=>3.17142857142857}
+[ActiveJob] [CommentUpdateJob] [9e8fb910-bd85-4e43-add7-4c1a3fc39e94] Performed CommentUpdateJob from Async(default) in 18.69ms
+ProductChannel transmitting {"comment"=>"<div class=\"row\">\n  <div class= \"col-md-12 col-md-offset-0 col-sm-8 col-sm-offset-2\">\n    <hr>\n    <p>\n      <strong>Nermin</strong> <small><em>less than a minute ago</em></small>\n    </p>\n    <p>Rating: 4/5</p>\n    <div class=\"rated\" data-score=\"4\"></div>\n    <p>fdfg... (via streamed from product:7)
+Started POST "/products/8/comments" for 127.0.0.1 at 2017-12-11 14:08:21 +0200
+Processing by CommentsController#create as JS
+  Parameters: {"utf8"=>"✓", "comment"=>{"body"=>"sVFD", "rating"=>"3"}, "commit"=>"Submit", "product_id"=>"8"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "body", "rating", "product_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["body", "sVFD"], ["rating", 3], ["product_id", 8], ["created_at", "2017-12-11 12:08:21.087799"], ["updated_at", "2017-12-11 12:08:21.087799"]]
+  [1m[35m (104.6ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] Enqueued CommentUpdateJob (Job ID: b7cf7759-d0b8-4e95-a0d7-4b83b0aa6f03) to Async(default) with arguments: #<GlobalID:0xb25a3e64 @uri=#<URI::GID gid://my-app/Comment/161>>, #<GlobalID:0xb25a3a54 @uri=#<URI::GID gid://my-app/User/1>>
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ?[0m  [["id", 161], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [CommentUpdateJob] [b7cf7759-d0b8-4e95-a0d7-4b83b0aa6f03] Performing CommentUpdateJob from Async(default) with arguments: #<GlobalID:0xb258f7ac @uri=#<URI::GID gid://my-app/Comment/161>>, #<GlobalID:0xb258ede8 @uri=#<URI::GID gid://my-app/User/1>>
+  Rendering comments/create.js.erb
+[ActiveJob] [CommentUpdateJob] [b7cf7759-d0b8-4e95-a0d7-4b83b0aa6f03]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered comments/_comment.html.erb (1.1ms)
+[ActiveJob] [CommentUpdateJob] [b7cf7759-d0b8-4e95-a0d7-4b83b0aa6f03]   Rendered comments/_comment.html.erb (3.8ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 8]]
+[ActiveJob] [CommentUpdateJob] [b7cf7759-d0b8-4e95-a0d7-4b83b0aa6f03]   [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered comments/create.js.erb (9.0ms)
+[ActiveJob] [CommentUpdateJob] [b7cf7759-d0b8-4e95-a0d7-4b83b0aa6f03]   [1m[35m (0.5ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 8]]
+Completed 200 OK in 153ms (Views: 24.7ms | ActiveRecord: 106.2ms)
+
+
+[ActiveJob] [CommentUpdateJob] [b7cf7759-d0b8-4e95-a0d7-4b83b0aa6f03] [ActionCable] Broadcasting to product:8: {:comment=>"<div class=\"row\">\n  <div class= \"col-md-12 col-md-offset-0 col-sm-8 col-sm-offset-2\">\n    <hr>\n    <p>\n      <strong>Nermin</strong> <small><em>less than a minute ago</em></small>\n    </p>\n    <p>Rating: 3/5</p>\n    <div class=\"rated\" data-score=\"3\"></div>\n    <p>sVFD</p>\n  </div> <!-- end col -->\n</div> <!-- end row -->\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", :average_rating=>3.09090909090909}
+[ActiveJob] [CommentUpdateJob] [b7cf7759-d0b8-4e95-a0d7-4b83b0aa6f03] Performed CommentUpdateJob from Async(default) in 20.27ms
+ProductChannel transmitting {"comment"=>"<div class=\"row\">\n  <div class= \"col-md-12 col-md-offset-0 col-sm-8 col-sm-offset-2\">\n    <hr>\n    <p>\n      <strong>Nermin</strong> <small><em>less than a minute ago</em></small>\n    </p>\n    <p>Rating: 3/5</p>\n    <div class=\"rated\" data-score=\"3\"></div>\n    <p>sVFD... (via streamed from product:8)
+Started GET "/products" for 127.0.0.1 at 2017-12-11 14:08:25 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [2 times] (3.5ms)
+  Rendered products/index.html.erb within layouts/application (6.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 56ms (Views: 53.5ms | ActiveRecord: 0.6ms)
+
+
+ProductChannel#listen
+ProductChannel stopped streaming from product:8
+ProductChannel is streaming from product:
+Started GET "/static_pages/index" for 127.0.0.1 at 2017-12-11 14:08:26 +0200
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 48ms (Views: 46.2ms | ActiveRecord: 0.2ms)
+
+
+ProductChannel#listen
+ProductChannel stopped streaming from product:
+ProductChannel is streaming from product:
+Started GET "/products" for 127.0.0.1 at 2017-12-11 14:08:55 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [2 times] (2.2ms)
+  Rendered products/index.html.erb within layouts/application (5.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 62ms (Views: 59.5ms | ActiveRecord: 0.5ms)
+
+
+ProductChannel#listen
+ProductChannel stopped streaming from product:
+ProductChannel is streaming from product:
+Started GET "/products/7" for 127.0.0.1 at 2017-12-11 14:08:56 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered shared/_stripe_checkout_button.html.erb (0.7ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 7]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered products/_new_comment.html.erb (2.1ms)
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ? ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["product_id", 7], ["LIMIT", 5], ["OFFSET", 0]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of comments/_comment.html.erb [5 times] (12.9ms)
+  Rendered products/_comments.html.erb (16.1ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 7]]
+  Rendered products/show.html.erb within layouts/application (30.8ms)
+Completed 200 OK in 91ms (Views: 85.5ms | ActiveRecord: 2.3ms)
+
+
+ProductChannel#listen({"product_id"=>7})
+ProductChannel stopped streaming from product:
+ProductChannel is streaming from product:7
+Started POST "/products/7/comments" for 127.0.0.1 at 2017-12-11 14:09:12 +0200
+Processing by CommentsController#create as JS
+  Parameters: {"utf8"=>"✓", "comment"=>{"body"=>"i LIKE VEGTABLES", "rating"=>"3"}, "commit"=>"Submit", "product_id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "body", "rating", "product_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["body", "i LIKE VEGTABLES"], ["rating", 3], ["product_id", 7], ["created_at", "2017-12-11 12:09:12.133671"], ["updated_at", "2017-12-11 12:09:12.133671"]]
+  [1m[35m (108.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ?[0m  [["id", 162], ["LIMIT", 1]]
+[ActiveJob] Enqueued CommentUpdateJob (Job ID: 221871ed-6db9-45d0-aad5-4e138f3fd65a) to Async(default) with arguments: #<GlobalID:0xb22f0e9c @uri=#<URI::GID gid://my-app/Comment/162>>, #<GlobalID:0xb22f09c4 @uri=#<URI::GID gid://my-app/User/1>>
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering comments/create.js.erb
+[ActiveJob] [CommentUpdateJob] [221871ed-6db9-45d0-aad5-4e138f3fd65a] Performing CommentUpdateJob from Async(default) with arguments: #<GlobalID:0xb22a6bf8 @uri=#<URI::GID gid://my-app/Comment/162>>, #<GlobalID:0xb22a6784 @uri=#<URI::GID gid://my-app/User/1>>
+[ActiveJob] [CommentUpdateJob] [221871ed-6db9-45d0-aad5-4e138f3fd65a]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered comments/_comment.html.erb (1.9ms)
+[ActiveJob] [CommentUpdateJob] [221871ed-6db9-45d0-aad5-4e138f3fd65a]   Rendered comments/_comment.html.erb (5.6ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 7]]
+[ActiveJob] [CommentUpdateJob] [221871ed-6db9-45d0-aad5-4e138f3fd65a]   [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered comments/create.js.erb (19.0ms)
+[ActiveJob] [CommentUpdateJob] [221871ed-6db9-45d0-aad5-4e138f3fd65a]   [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 7]]
+Completed 200 OK in 162ms (Views: 28.6ms | ActiveRecord: 109.5ms)
+
+
+[ActiveJob] [CommentUpdateJob] [221871ed-6db9-45d0-aad5-4e138f3fd65a] [ActionCable] Broadcasting to product:7: {:comment=>"<div class=\"row\">\n  <div class= \"col-md-12 col-md-offset-0 col-sm-8 col-sm-offset-2\">\n    <hr>\n    <p>\n      <strong>Nermin</strong> <small><em>less than a minute ago</em></small>\n    </p>\n    <p>Rating: 3/5</p>\n    <div class=\"rated\" data-score=\"3\"></div>\n    <p>i LIKE VEGTABLES</p>\n  </div> <!-- end col -->\n</div> <!-- end row -->\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", :average_rating=>3.16666666666667}
+[ActiveJob] [CommentUpdateJob] [221871ed-6db9-45d0-aad5-4e138f3fd65a] Performed CommentUpdateJob from Async(default) in 21.45ms
+ProductChannel transmitting {"comment"=>"<div class=\"row\">\n  <div class= \"col-md-12 col-md-offset-0 col-sm-8 col-sm-offset-2\">\n    <hr>\n    <p>\n      <strong>Nermin</strong> <small><em>less than a minute ago</em></small>\n    </p>\n    <p>Rating: 3/5</p>\n    <div class=\"rated\" data-score=\"3\"></div>\n    <p>i LI... (via streamed from product:7)
+ProductChannel transmitting {"comment"=>"<div class=\"row\">\n  <div class= \"col-md-12 col-md-offset-0 col-sm-8 col-sm-offset-2\">\n    <hr>\n    <p>\n      <strong>Nermin</strong> <small><em>less than a minute ago</em></small>\n    </p>\n    <p>Rating: 3/5</p>\n    <div class=\"rated\" data-score=\"3\"></div>\n    <p>i LI... (via streamed from product:7)
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-11 14:11:25 +0200
+ProductChannel stopped streaming from product:7
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-11 14:11:53 +0200
+ProductChannel stopped streaming from product:7
+Started DELETE "/logout" for 127.0.0.1 at 2017-12-11 14:11:53 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"pVoSSTwzRxFYLZY6i1i41x+MXu3cTpgmeZZarB69EG2B0CJmoWh7oJqwcreuS5qijEcJuNT4xeXVzBAPq9ci3w=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-11 14:11:53 +0200
+Processing by StaticPagesController#landing_page as HTML
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered static_pages/landing_page.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 42ms (Views: 40.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cable" for 127.0.0.1 at 2017-12-11 14:11:54 +0200
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-11 14:11:54 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+ProductChannel is transmitting the subscription confirmation
+ProductChannel#listen
+ProductChannel is streaming from product:
+Started GET "/products" for 127.0.0.1 at 2017-12-11 14:11:55 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [2 times] (3.8ms)
+  Rendered products/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 57ms (Views: 54.3ms | ActiveRecord: 0.3ms)
+
+
+ProductChannel#listen
+ProductChannel stopped streaming from product:
+ProductChannel is streaming from product:
+Started GET "/products/7" for 127.0.0.1 at 2017-12-11 14:11:56 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered shared/_stripe_checkout_button.html.erb (1.2ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 7]]
+  Rendered products/_new_comment.html.erb (1.8ms)
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ? ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["product_id", 7], ["LIMIT", 5], ["OFFSET", 0]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered collection of comments/_comment.html.erb [5 times] (8.7ms)
+  Rendered products/_comments.html.erb (11.5ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 7]]
+  Rendered products/show.html.erb within layouts/application (26.1ms)
+Completed 200 OK in 71ms (Views: 66.7ms | ActiveRecord: 1.5ms)
+
+
+ProductChannel#listen({"product_id"=>7})
+ProductChannel stopped streaming from product:
+ProductChannel is streaming from product:7
+Started GET "/static_pages/index" for 127.0.0.1 at 2017-12-11 14:12:05 +0200
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 53ms (Views: 49.8ms | ActiveRecord: 0.0ms)
+
+
+ProductChannel#listen
+ProductChannel stopped streaming from product:7
+ProductChannel is streaming from product:
+Started GET "/products" for 127.0.0.1 at 2017-12-11 14:12:06 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [2 times] (3.2ms)
+  Rendered products/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 70ms (Views: 67.0ms | ActiveRecord: 0.3ms)
+
+
+ProductChannel#listen
+ProductChannel stopped streaming from product:
+ProductChannel is streaming from product:
+Started GET "/static_pages/about" for 127.0.0.1 at 2017-12-11 14:12:08 +0200
+Processing by StaticPagesController#about as HTML
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 42ms (Views: 39.9ms | ActiveRecord: 0.0ms)
+
+
+ProductChannel#listen
+ProductChannel stopped streaming from product:
+ProductChannel is streaming from product:
+Started GET "/static_pages/landing_page" for 127.0.0.1 at 2017-12-11 14:12:09 +0200
+Processing by StaticPagesController#landing_page as HTML
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered static_pages/landing_page.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 47ms (Views: 43.8ms | ActiveRecord: 0.7ms)
+
+
+ProductChannel#listen
+ProductChannel stopped streaming from product:
+ProductChannel is streaming from product:
+Started GET "/users" for 127.0.0.1 at 2017-12-11 14:12:10 +0200
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:UsersController> at /home/nm/trails1-product-reviews/app/controllers/users_controller.rb:3)
+Processing by UsersController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-12-11 14:12:10 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 45ms (Views: 43.8ms | ActiveRecord: 0.0ms)
+
+
+ProductChannel#listen
+ProductChannel stopped streaming from product:
+ProductChannel is streaming from product:
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-11 14:12:13 +0200
+ProductChannel stopped streaming from product:
+Started POST "/login" for 127.0.0.1 at 2017-12-11 14:12:13 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WCJR+hbU52uWpKN9kQfhVP/II/Dn7swhSLgVtRiM6FfVwkm4ylkEtOIhWSLErNYz7+G9kWnzpRi4RRHcHmAQDw==", "user"=>{"email"=>"123455@hotmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "123455@hotmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2017-12-11 12:12:13.482923"], ["last_sign_in_at", "2017-12-11 12:06:37.786146"], ["sign_in_count", 30], ["updated_at", "2017-12-11 12:12:13.484371"], ["id", 1]]
+  [1m[35m (76.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 298ms (ActiveRecord: 77.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-12-11 14:12:13 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 48ms (Views: 38.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cable" for 127.0.0.1 at 2017-12-11 14:12:13 +0200
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-11 14:12:13 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+ProductChannel is transmitting the subscription confirmation
+ProductChannel#listen
+ProductChannel is streaming from product:
+Started GET "/static_pages/index" for 127.0.0.1 at 2017-12-11 14:12:16 +0200
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 53ms (Views: 51.3ms | ActiveRecord: 0.2ms)
+
+
+ProductChannel#listen
+ProductChannel stopped streaming from product:
+ProductChannel is streaming from product:
+Started GET "/cable" for 127.0.0.1 at 2017-12-11 14:13:55 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-11 14:13:55 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+ProductChannel is transmitting the subscription confirmation
+ProductChannel#listen
+ProductChannel is streaming from product:
+Started GET "/" for 127.0.0.1 at 2017-12-11 14:14:05 +0200
+Processing by StaticPagesController#landing_page as HTML
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered static_pages/landing_page.html.erb within layouts/application (15.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 386ms (Views: 363.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/cable" for 127.0.0.1 at 2017-12-11 14:14:06 +0200
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-11 14:14:06 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+ProductChannel is transmitting the subscription confirmation
+ProductChannel#listen
+ProductChannel is streaming from product:
+Started GET "/products" for 127.0.0.1 at 2017-12-11 14:14:07 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [2 times] (3.9ms)
+  Rendered products/index.html.erb within layouts/application (8.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 55ms (Views: 51.5ms | ActiveRecord: 0.9ms)
+
+
+ProductChannel#listen
+ProductChannel stopped streaming from product:
+ProductChannel is streaming from product:
+Started GET "/products/7" for 127.0.0.1 at 2017-12-11 14:14:09 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered shared/_stripe_checkout_button.html.erb (0.8ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 7]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered products/_new_comment.html.erb (21.4ms)
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ? ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["product_id", 7], ["LIMIT", 5], ["OFFSET", 0]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered collection of comments/_comment.html.erb [5 times] (9.7ms)
+  Rendered products/_comments.html.erb (12.2ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 7]]
+  Rendered products/show.html.erb within layouts/application (60.5ms)
+Completed 200 OK in 144ms (Views: 111.9ms | ActiveRecord: 2.4ms)
+
+
+ProductChannel#listen({"product_id"=>7})
+ProductChannel stopped streaming from product:
+ProductChannel is streaming from product:7
+Started POST "/products/7/comments" for 127.0.0.1 at 2017-12-11 14:14:16 +0200
+Processing by CommentsController#create as JS
+  Parameters: {"utf8"=>"✓", "comment"=>{"body"=>"szDZ", "rating"=>"3"}, "commit"=>"Submit", "product_id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "body", "rating", "product_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["body", "szDZ"], ["rating", 3], ["product_id", 7], ["created_at", "2017-12-11 12:14:16.642503"], ["updated_at", "2017-12-11 12:14:16.642503"]]
+  [1m[35m (101.8ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] Enqueued CommentUpdateJob (Job ID: 0b7cfee8-b45e-4862-bac7-59f715e3dca0) to Async(default) with arguments: #<GlobalID:0xb27998cc @uri=#<URI::GID gid://my-app/Comment/163>>, #<GlobalID:0xb27994bc @uri=#<URI::GID gid://my-app/User/1>>
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ?[0m  [["id", 163], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering comments/create.js.erb
+[ActiveJob] [CommentUpdateJob] [0b7cfee8-b45e-4862-bac7-59f715e3dca0] Performing CommentUpdateJob from Async(default) with arguments: #<GlobalID:0xb27438dc @uri=#<URI::GID gid://my-app/Comment/163>>, #<GlobalID:0xb2743490 @uri=#<URI::GID gid://my-app/User/1>>
+  Rendered comments/_comment.html.erb (0.9ms)
+[ActiveJob] [CommentUpdateJob] [0b7cfee8-b45e-4862-bac7-59f715e3dca0]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 7]]
+[ActiveJob] [CommentUpdateJob] [0b7cfee8-b45e-4862-bac7-59f715e3dca0]   Rendered comments/_comment.html.erb (3.5ms)
+  Rendered comments/create.js.erb (9.9ms)
+[ActiveJob] [CommentUpdateJob] [0b7cfee8-b45e-4862-bac7-59f715e3dca0]   [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 168ms (Views: 18.2ms | ActiveRecord: 102.7ms)
+
+
+[ActiveJob] [CommentUpdateJob] [0b7cfee8-b45e-4862-bac7-59f715e3dca0]   [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 7]]
+[ActiveJob] [CommentUpdateJob] [0b7cfee8-b45e-4862-bac7-59f715e3dca0] [ActionCable] Broadcasting to product:7: {:comment=>"<div class=\"row\">\n  <div class= \"col-md-12 col-md-offset-0 col-sm-8 col-sm-offset-2\">\n    <hr>\n    <p>\n      <strong>Nermin</strong> <small><em>less than a minute ago</em></small>\n    </p>\n    <p>Rating: 3/5</p>\n    <div class=\"rated\" data-score=\"3\"></div>\n    <p>szDZ</p>\n  </div> <!-- end col -->\n</div> <!-- end row -->\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", :average_rating=>3.16216216216216}
+[ActiveJob] [CommentUpdateJob] [0b7cfee8-b45e-4862-bac7-59f715e3dca0] Performed CommentUpdateJob from Async(default) in 13.06ms
+ProductChannel transmitting {"comment"=>"<div class=\"row\">\n  <div class= \"col-md-12 col-md-offset-0 col-sm-8 col-sm-offset-2\">\n    <hr>\n    <p>\n      <strong>Nermin</strong> <small><em>less than a minute ago</em></small>\n    </p>\n    <p>Rating: 3/5</p>\n    <div class=\"rated\" data-score=\"3\"></div>\n    <p>szDZ... (via streamed from product:7)
+Started GET "/static_pages/index" for 127.0.0.1 at 2017-12-11 14:14:33 +0200
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 52ms (Views: 49.8ms | ActiveRecord: 0.2ms)
+
+
+ProductChannel#listen
+ProductChannel stopped streaming from product:7
+ProductChannel is streaming from product:
+Started GET "/products" for 127.0.0.1 at 2017-12-11 14:14:34 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [2 times] (3.3ms)
+  Rendered products/index.html.erb within layouts/application (8.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 65ms (Views: 61.8ms | ActiveRecord: 0.5ms)
+
+
+ProductChannel#listen
+ProductChannel stopped streaming from product:
+ProductChannel is streaming from product:
+Started GET "/static_pages/about" for 127.0.0.1 at 2017-12-11 14:14:35 +0200
+Processing by StaticPagesController#about as HTML
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 47ms (Views: 45.1ms | ActiveRecord: 0.4ms)
+
+
+ProductChannel#listen
+ProductChannel stopped streaming from product:
+ProductChannel is streaming from product:
+Started GET "/static_pages/contact" for 127.0.0.1 at 2017-12-11 14:14:35 +0200
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 56ms (Views: 53.5ms | ActiveRecord: 0.2ms)
+
+
+ProductChannel#listen
+ProductChannel stopped streaming from product:
+ProductChannel is streaming from product:
+Started GET "/static_pages/landing_page" for 127.0.0.1 at 2017-12-11 14:14:36 +0200
+Processing by StaticPagesController#landing_page as HTML
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered static_pages/landing_page.html.erb within layouts/application (3.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 49ms (Views: 46.5ms | ActiveRecord: 0.6ms)
+
+
+ProductChannel#listen
+ProductChannel stopped streaming from product:
+ProductChannel is streaming from product:
+Started GET "/users" for 127.0.0.1 at 2017-12-11 14:14:37 +0200
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:UsersController> at /home/nm/trails1-product-reviews/app/controllers/users_controller.rb:3)
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 55ms (Views: 39.1ms | ActiveRecord: 0.8ms)
+
+
+ProductChannel#listen
+ProductChannel stopped streaming from product:
+ProductChannel is streaming from product:
+Started GET "/static_pages/index" for 127.0.0.1 at 2017-12-11 14:14:38 +0200
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 58ms (Views: 55.9ms | ActiveRecord: 0.2ms)
+
+
+ProductChannel#listen
+ProductChannel stopped streaming from product:
+ProductChannel is streaming from product:
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-11 14:14:46 +0200
+ProductChannel stopped streaming from product:
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-11 14:14:48 +0200
+ProductChannel stopped streaming from product:
+Started GET "/" for 127.0.0.1 at 2017-12-11 15:51:13 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#landing_page as HTML
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered static_pages/landing_page.html.erb within layouts/application (26.2ms)
+Completed 200 OK in 1206ms (Views: 1123.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/cable" for 127.0.0.1 at 2017-12-11 15:51:15 +0200
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-11 15:51:16 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+ProductChannel is transmitting the subscription confirmation
+ProductChannel#listen
+ProductChannel is streaming from product:

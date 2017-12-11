@@ -16,7 +16,6 @@ App.product = App.cable.subscriptions.create("ProductChannel", {
   },
 
 
-
   listen_to_comments: function() {
     return this.perform('listen', {
       product_id: $("[data-product-id]").data("product-id")
@@ -27,4 +26,6 @@ App.product = App.cable.subscriptions.create("ProductChannel", {
 $(document).on('ready turbolinks:load', function() {
   App.product.listen_to_comments();
 });
+
+
 
