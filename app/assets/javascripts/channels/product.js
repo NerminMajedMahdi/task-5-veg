@@ -15,6 +15,8 @@ App.product = App.cable.subscriptions.create("ProductChannel", {
     refreshRating();
   },
 
+
+
   listen_to_comments: function() {
     return this.perform('listen', {
       product_id: $("[data-product-id]").data("product-id")

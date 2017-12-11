@@ -5,6 +5,7 @@
 
   <div class="row">
     <!--<div class="col-sm-6 col-md-4">-->
+<div class="row" data-product-id="<%= @product.id %>">
       <div class="thumbnail">
 
            <%= image_tag(@product.image_url, class: "img-responsive img-zoom", data_zoom_image: "@product.image_url") %>
@@ -61,8 +62,7 @@
 
 <%= render 'new_comment' %>
 <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
-
 <%= render 'comments' %>
 <%= will_paginate @comments %>
-
+</div>
 </div>
