@@ -7,8 +7,7 @@ class Ability
     if user.admin?
     	can [:manage, :destroy], :all
     else
-    	can :read, :all
-    can :read, [Product, Comment]
+      can :read, :all
       can :manage, User, id: user.id
       can :manage, Comment, user_id: user.id
       cannot [:create, :update, :destroy], Product

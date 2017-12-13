@@ -2,19 +2,28 @@
 
 
 <div class="container-fluid layout-product">
-  <h1>Products</h1>
+  <h1>Products</h1> 
   <div class="row">
 <% cache @products do %>
   <%= render @products %>
 <% end %>
 
 
+
   </div>
+<% if signed_in? && current_user.admin? %>
+<a class="btn btn-default" href="/products/new">Enter a New Product</a>
+<% end %>
 </div>
+
 
 <br>
 
 
 
 
-<%= link_to 'New Product', new_product_path %>
+
+
+
+
+

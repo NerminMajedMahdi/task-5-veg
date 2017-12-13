@@ -20,7 +20,9 @@ html, body {
   height: 100%;
 }
 
-a{color:black;}
+.a:link {
+    color: red;
+}
 
 .page-wrap {
   min-height: 100%;

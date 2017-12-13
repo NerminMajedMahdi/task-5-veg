@@ -24,15 +24,14 @@ def create
 end
 
 
+
 	
   def destroy
-
     authorize! :destroy, @comment
     @comment.destroy
-    @product = @comment.product
-
+    @product = @comment.product(params[:id])
     redirect_to @product, notice: 'Comment has been destroyed successfully'
-end
+  end
 
 	private
 

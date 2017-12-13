@@ -43,17 +43,9 @@
            
              <div class="text-center">
             <% if signed_in? && current_user.admin? %>
-            <%= link_to 'Delete',
-              product_path(@product), method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-default' %>
-            <% end %>
-
-            <% if signed_in? && current_user.admin? %>
             <%= link_to 'Edit', edit_product_path(@product), class: 'btn btn-default' %>
             <% end %>
-
-
-             <div class="product-buttons">
-    <%= link_to 'Edit', edit_product_path(@product), class: "btn btn-default"%> |
+ 
     <%= link_to 'Back', products_path, class: "btn btn-default" %>
   </div>
  
