@@ -51483,3 +51483,30 @@ ProductChannel stopped streaming from product:
 ProductChannel is streaming from product:
 Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-15 09:45:30 +0200
 ProductChannel stopped streaming from product:
+Started GET "/" for 127.0.0.1 at 2017-12-15 15:22:58 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#landing_page as HTML
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered static_pages/landing_page.html.erb within layouts/application (23.2ms)
+Completed 200 OK in 592ms (Views: 507.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/cable" for 127.0.0.1 at 2017-12-15 15:22:59 +0200
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-15 15:22:59 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+ProductChannel is transmitting the subscription confirmation
+ProductChannel#listen
+ProductChannel is streaming from product:
+Started GET "/products" for 127.0.0.1 at 2017-12-15 15:23:00 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [2 times] (2.2ms)
+  Rendered products/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 56ms (Views: 43.6ms | ActiveRecord: 0.2ms)
+
+
+ProductChannel#listen
+ProductChannel stopped streaming from product:
+ProductChannel is streaming from product:
