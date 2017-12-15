@@ -53264,3 +53264,5 @@ Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-a
 ProductChannel is transmitting the subscription confirmation
 ProductChannel#listen
 ProductChannel is streaming from product:
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-15 19:38:52 +0200
+ProductChannel stopped streaming from product:

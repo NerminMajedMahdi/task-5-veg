@@ -2,7 +2,7 @@
 class OrdersController < ApplicationController
 
  before_filter :authenticate_user!
-before_filter :admin_only
+ before_filter :admin_only
 
   def index    
     @orders = Order.all
@@ -17,7 +17,7 @@ before_filter :admin_only
   def create
   end
 
-  def destryoy
+  def destroy
   end
 
   private
