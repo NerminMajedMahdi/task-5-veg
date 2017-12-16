@@ -12,8 +12,8 @@ require "action_cable/engine"
 require "sprockets/railtie"
 # require "rails/test_unit/railtie"
 
-
-
+config.cache_store = :redis_store, "redis://localhost:6379/0/cache"
+config.assets.paths << Rails.root.join("vendor","assets", "javascripts")
 
 
 # Require the gems listed in Gemfile, including any gems
