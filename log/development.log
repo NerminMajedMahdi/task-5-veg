@@ -54448,3 +54448,397 @@ ProductChannel stopped streaming from product:14
 ProductChannel is streaming from product:
 Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-16 23:26:09 +0200
 ProductChannel stopped streaming from product:
+Started GET "/products" for 127.0.0.1 at 2017-12-17 11:33:51 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [4 times] (20.8ms)
+  Rendered products/index.html.erb within layouts/application (70.4ms)
+Completed 200 OK in 1685ms (Views: 1599.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/cable" for 127.0.0.1 at 2017-12-17 11:33:54 +0200
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-17 11:33:54 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+Started GET "/" for 127.0.0.1 at 2017-12-17 11:33:55 +0200
+Processing by StaticPagesController#landing_page as HTML
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered static_pages/landing_page.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 50ms (Views: 40.3ms | ActiveRecord: 0.6ms)
+
+
+ProductChannel is transmitting the subscription confirmation
+ProductChannel#listen
+ProductChannel is streaming from product:
+Started GET "/cable" for 127.0.0.1 at 2017-12-17 11:33:55 +0200
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-17 11:33:55 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+ProductChannel is transmitting the subscription confirmation
+ProductChannel#listen
+ProductChannel is streaming from product:
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-17 11:33:58 +0200
+ProductChannel stopped streaming from product:
+Started GET "/products" for 127.0.0.1 at 2017-12-17 11:33:59 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [4 times] (4.4ms)
+  Rendered products/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 49ms (Views: 47.2ms | ActiveRecord: 0.6ms)
+
+
+ProductChannel#listen
+ProductChannel stopped streaming from product:
+ProductChannel is streaming from product:
+Started GET "/products/13" for 127.0.0.1 at 2017-12-17 11:34:01 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered shared/_stripe_checkout_button.html.erb (1.2ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 13]]
+  Rendered products/_new_comment.html.erb (0.7ms)
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ? ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["product_id", 13], ["LIMIT", 5], ["OFFSET", 0]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of comments/_comment.html.erb [2 times] (5.6ms)
+  Rendered products/_comments.html.erb (51.9ms)
+  Rendered products/show.html.erb within layouts/application (275.7ms)
+Completed 200 OK in 438ms (Views: 308.7ms | ActiveRecord: 4.1ms)
+
+
+ProductChannel#listen({"product_id"=>13})
+ProductChannel stopped streaming from product:
+ProductChannel is streaming from product:13
+Started GET "/login" for 127.0.0.1 at 2017-12-17 11:34:06 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (58.0ms)
+Completed 200 OK in 144ms (Views: 116.7ms | ActiveRecord: 0.0ms)
+
+
+ProductChannel#listen
+ProductChannel stopped streaming from product:13
+ProductChannel is streaming from product:
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-17 11:34:09 +0200
+ProductChannel stopped streaming from product:
+Started POST "/login" for 127.0.0.1 at 2017-12-17 11:34:09 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NCwaEDkFEHNYMv3xoLw5TIFWMhqJIQUjqUSTRwyz5C4sqXfI2xIV5Qw9n4aIv/ES/Fu80q8WZ+RmQZUO34O9Gw==", "user"=>{"email"=>"123455@hotmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "123455@hotmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (19.8ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2017-12-17 09:34:10.259727"], ["last_sign_in_at", "2017-12-16 21:05:48.951987"], ["sign_in_count", 45], ["updated_at", "2017-12-17 09:34:10.261146"], ["id", 1]]
+  [1m[35m (72.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 541ms (ActiveRecord: 92.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-17 11:34:10 +0200
+Processing by StaticPagesController#landing_page as HTML
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered static_pages/landing_page.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 44ms (Views: 40.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/cable" for 127.0.0.1 at 2017-12-17 11:34:10 +0200
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-17 11:34:10 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+ProductChannel is transmitting the subscription confirmation
+ProductChannel#listen
+ProductChannel is streaming from product:
+Started GET "/products" for 127.0.0.1 at 2017-12-17 11:34:12 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of products/_product.html.erb [4 times] (6.5ms)
+  Rendered products/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 57ms (Views: 54.4ms | ActiveRecord: 0.7ms)
+
+
+ProductChannel#listen
+ProductChannel stopped streaming from product:
+ProductChannel is streaming from product:
+Started GET "/products/new" for 127.0.0.1 at 2017-12-17 11:34:20 +0200
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (23.8ms)
+  Rendered products/new.html.erb within layouts/application (39.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 87ms (Views: 78.7ms | ActiveRecord: 0.5ms)
+
+
+ProductChannel#listen
+ProductChannel stopped streaming from product:
+ProductChannel is streaming from product:
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-17 11:34:41 +0200
+ProductChannel stopped streaming from product:
+Started POST "/products" for 127.0.0.1 at 2017-12-17 11:34:41 +0200
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"woFtIGbm0tKWjvJBCMX3q90TsuFFxAD10wgK/D+d5dQhJ5RfU/VB9NRxLyUOkASDYE06Ob/kZu9YZNP2u1+3rA==", "product"=>{"name"=>"fgfhf", "description"=>"dhgfghjf", "image_url"=>"https://static.pexels.com/photos/36764/marguerite-daisy-beautiful-beauty.jpg", "colour"=>"Orange", "price"=>"44"}, "commit"=>"Create Product"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "image_url", "created_at", "updated_at", "colour", "price") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "fgfhf"], ["description", "dhgfghjf"], ["image_url", "https://static.pexels.com/photos/36764/marguerite-daisy-beautiful-beauty.jpg"], ["created_at", "2017-12-17 09:34:41.142383"], ["updated_at", "2017-12-17 09:34:41.142383"], ["colour", "Orange"], ["price", 44]]
+  [1m[35m (211.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/products/18
+Completed 302 Found in 217ms (ActiveRecord: 211.7ms)
+
+
+Started GET "/products/18" for 127.0.0.1 at 2017-12-17 11:34:41 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered shared/_stripe_checkout_button.html.erb (0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 18]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered products/_new_comment.html.erb (2.4ms)
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ? ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["product_id", 18], ["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered products/_comments.html.erb (1.3ms)
+  Rendered products/show.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 53ms (Views: 49.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/cable" for 127.0.0.1 at 2017-12-17 11:34:41 +0200
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-17 11:34:41 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+ProductChannel is transmitting the subscription confirmation
+ProductChannel#listen({"product_id"=>18})
+ProductChannel is streaming from product:18
+ProductChannel#listen({"product_id"=>18})
+ProductChannel stopped streaming from product:18
+ProductChannel is streaming from product:18
+Started GET "/products" for 127.0.0.1 at 2017-12-17 11:34:43 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of products/_product.html.erb [5 times] (7.1ms)
+  Rendered products/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 54ms (Views: 51.9ms | ActiveRecord: 0.8ms)
+
+
+ProductChannel#listen
+ProductChannel stopped streaming from product:18
+ProductChannel is streaming from product:
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-17 11:34:51 +0200
+ProductChannel stopped streaming from product:
+Started DELETE "/logout" for 127.0.0.1 at 2017-12-17 11:34:51 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/Sbzp0IQstmWA2eDgiiefwUnruVkuCEu/diZ4v00xQwegArYdwMh/9T8uueEfW1XuHkmPZ6YRzR2tEDoefaXdA=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 69ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-17 11:34:51 +0200
+Processing by StaticPagesController#landing_page as HTML
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered static_pages/landing_page.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 47ms (Views: 42.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cable" for 127.0.0.1 at 2017-12-17 11:34:51 +0200
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-17 11:34:51 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+ProductChannel is transmitting the subscription confirmation
+ProductChannel#listen
+ProductChannel is streaming from product:
+Started GET "/login" for 127.0.0.1 at 2017-12-17 11:34:53 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 58ms (Views: 56.0ms | ActiveRecord: 0.0ms)
+
+
+ProductChannel#listen
+ProductChannel stopped streaming from product:
+ProductChannel is streaming from product:
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-17 11:34:58 +0200
+ProductChannel stopped streaming from product:
+Started POST "/login" for 127.0.0.1 at 2017-12-17 11:34:58 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LCd8k/82p6mit41fz3uZiEmzQausF8E7QT/O1K7xkl7HceP/9FipP68tFT2LC8Ic2DquY0J6ja9TMckXxMrOxA==", "user"=>{"email"=>"u@u.u", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "u@u.u"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2017-12-17 09:34:58.293769"], ["last_sign_in_at", "2017-12-16 21:07:59.699766"], ["sign_in_count", 3], ["updated_at", "2017-12-17 09:34:58.294938"], ["id", 8]]
+  [1m[35m (66.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 283ms (ActiveRecord: 67.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-17 11:34:58 +0200
+Processing by StaticPagesController#landing_page as HTML
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered static_pages/landing_page.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Completed 200 OK in 45ms (Views: 42.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cable" for 127.0.0.1 at 2017-12-17 11:34:58 +0200
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-17 11:34:58 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+ProductChannel is transmitting the subscription confirmation
+ProductChannel#listen
+ProductChannel is streaming from product:
+Started GET "/products" for 127.0.0.1 at 2017-12-17 11:35:00 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered collection of products/_product.html.erb [5 times] (6.8ms)
+  Rendered products/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 56ms (Views: 53.6ms | ActiveRecord: 0.7ms)
+
+
+ProductChannel#listen
+ProductChannel stopped streaming from product:
+ProductChannel is streaming from product:
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-17 11:35:08 +0200
+ProductChannel stopped streaming from product:
+Started DELETE "/logout" for 127.0.0.1 at 2017-12-17 11:35:08 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"tur94EQ6Nr0Ko4t7kdzRECwMgpXxs14bb91ccK8QoixrCQhywpyHveCMXRsDW/NCeohLBKIlkl1tfPvSl7EfEA=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-17 11:35:08 +0200
+Processing by StaticPagesController#landing_page as HTML
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered static_pages/landing_page.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 43ms (Views: 41.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cable" for 127.0.0.1 at 2017-12-17 11:35:08 +0200
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-17 11:35:08 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+ProductChannel is transmitting the subscription confirmation
+ProductChannel#listen
+ProductChannel is streaming from product:
+Started GET "/products" for 127.0.0.1 at 2017-12-17 11:35:22 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [5 times] (4.8ms)
+  Rendered products/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 56ms (Views: 53.4ms | ActiveRecord: 0.3ms)
+
+
+ProductChannel#listen
+ProductChannel stopped streaming from product:
+ProductChannel is streaming from product:
+Started GET "/products" for 127.0.0.1 at 2017-12-17 11:35:52 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [5 times] (9.8ms)
+  Rendered products/index.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 52ms (Views: 50.4ms | ActiveRecord: 0.2ms)
+
+
+ProductChannel#listen
+ProductChannel stopped streaming from product:
+ProductChannel is streaming from product:
+Started GET "/static_pages/landing_page" for 127.0.0.1 at 2017-12-17 11:35:55 +0200
+Processing by StaticPagesController#landing_page as HTML
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered static_pages/landing_page.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 39ms (Views: 38.0ms | ActiveRecord: 0.2ms)
+
+
+ProductChannel#listen
+ProductChannel stopped streaming from product:
+ProductChannel is streaming from product:
+Started GET "/static_pages/contact" for 127.0.0.1 at 2017-12-17 11:35:55 +0200
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 39ms (Views: 37.6ms | ActiveRecord: 0.0ms)
+
+
+ProductChannel#listen
+ProductChannel stopped streaming from product:
+ProductChannel is streaming from product:
+Started GET "/static_pages/about" for 127.0.0.1 at 2017-12-17 11:35:56 +0200
+Processing by StaticPagesController#about as HTML
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 43ms (Views: 41.8ms | ActiveRecord: 0.0ms)
+
+
+ProductChannel#listen
+ProductChannel stopped streaming from product:
+ProductChannel is streaming from product:
+Started GET "/products" for 127.0.0.1 at 2017-12-17 11:35:57 +0200
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered collection of products/_product.html.erb [5 times] (5.5ms)
+  Rendered products/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 82ms (Views: 79.8ms | ActiveRecord: 0.3ms)
+
+
+ProductChannel#listen
+ProductChannel stopped streaming from product:
+ProductChannel is streaming from product:
+Started GET "/static_pages/index" for 127.0.0.1 at 2017-12-17 11:35:57 +0200
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 65ms (Views: 49.7ms | ActiveRecord: 0.0ms)
+
+
+ProductChannel#listen
+ProductChannel stopped streaming from product:
+ProductChannel is streaming from product:
+Started GET "/sign_up" for 127.0.0.1 at 2017-12-17 11:36:02 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 69ms (Views: 68.0ms | ActiveRecord: 0.0ms)
+
+
+ProductChannel#listen
+ProductChannel stopped streaming from product:
+ProductChannel is streaming from product:
+Started GET "/login" for 127.0.0.1 at 2017-12-17 11:36:03 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 48ms (Views: 46.1ms | ActiveRecord: 0.0ms)
+
+
+ProductChannel#listen
+ProductChannel stopped streaming from product:
+ProductChannel is streaming from product:
+Started GET "/static_pages/landing_page" for 127.0.0.1 at 2017-12-17 11:36:04 +0200
+Processing by StaticPagesController#landing_page as HTML
+  Rendering static_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered static_pages/landing_page.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 48ms (Views: 46.0ms | ActiveRecord: 0.2ms)
+
+
+ProductChannel#listen
+ProductChannel stopped streaming from product:
+ProductChannel is streaming from product:
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-17 11:36:07 +0200
+ProductChannel stopped streaming from product:
